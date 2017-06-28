@@ -1,0 +1,78 @@
+// base.scss
+// =============================================================================
+//
+
+body {
+    font-family: $textFont;
+}
+
+p {
+    @include font-size($p-font-sizes);
+    color: $textColor;
+    font-weight: $thin;
+}
+
+h1,h2,h3,h4,h5,p {
+    @include line-height($line-heights);    
+}
+
+i.fa {
+    font-size: $iconSize;
+}
+
+// Headings
+// =============================================================================
+//
+h1 {
+    @include font-size($h1-font-sizes);
+    @include fontOutline;
+    padding-bottom: 20px;
+}
+h2 {
+    @include font-size($h2-font-sizes);
+    color: $h2Color;
+}
+h3 {
+    @include font-size($h3-font-sizes);
+    padding: 50px 0;
+    @include fontOutline;
+}
+
+h4 {
+    font-weight: $bold;
+    font-family: $h4Font;
+    color: $h5Color;
+    @include font-size($h4-font-sizes);
+    padding-bottom: 5px;
+}
+h5 {
+    font-weight: $bold;
+    color: $h5Color;
+    @include font-size($h5-font-sizes);
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    @include href($linkColor);
+}
+
+h1, h3 {
+    font-family: $h1Font;
+    font-weight: $h1FontWeight;
+    text-transform: $headTrans;
+    text-align: center;
+    color: $h1Color;
+    letter-spacing: $h1LetterSpacing;    
+}
+
+strong {
+    font-weight: $bold;
+}
+
+.underline {
+    border-bottom: 5px solid $underlineColor;
+}

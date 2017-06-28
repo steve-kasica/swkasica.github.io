@@ -1,0 +1,60 @@
+# Jekyll Config Files
+#
+first_name: Stephen
+last_name: Kasica
+email: stephen.kasica@gmail.com
+description: A portfolio of code and writing by Stephen Kasica
+
+sections:
+    - title: Writing
+      desc: writing clips
+      icon: fa-pencil-square-o
+      category: writing
+    - title: Code
+      desc: creative technology
+      icon: fa-code
+      category: code
+    - title: Community
+      desc: developer community involvement
+      icon: fa-code-fork
+      category: community
+
+footerLinks:
+    - name: GitHub
+      username: "@stvkas"
+      href: https://github.com/stvkas
+      icon: fa-github
+    - name: Medium
+      href: https://medium.com/@stvkas
+      username: "@stvkas"
+      icon: fa-medium
+    - name: Facebook
+      username: stephen.kasica
+      href: https://facebook.com/stephen.kasica
+      icon: fa-facebook
+    - name: LinkedIn
+      username: Stephen Kasica
+      href: https://www.linkedin.com/in/kasica/
+      icon: fa-linkedin-square
+    - name: Stack Overflow
+      username: "@kas"
+      href: https://stackoverflow.com/users/3734991/kas
+      icon: fa-stack-overflow
+
+permalink: none
+
+# Blog settings
+charset: 'utf-8'
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+gems:
+    - jekyll-feed 
+    - jekyll-gist
+    - jekyll-compass
+
+exclude:
+  - Gemfile
+  - Gemfile.lock

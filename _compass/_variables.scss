@@ -1,0 +1,175 @@
+/**
+ * _variables.scss
+ *
+ */
+ 
+// Layout
+// =============================================================================
+//
+$mobileStart: 320px;
+$mobileEnd: 425px;
+$tabletStart: $mobileEnd + 1px;
+$tabletEnd: 768px;
+$laptopStart: $tabletEnd + 1px;
+$laptopEnd: 1439px;
+$fourKStart: $laptopEnd + 1px;
+$fourKEnd: 2560px;
+
+$mobile: $mobileStart $mobileEnd;
+$tablet: $tabletStart $tabletEnd;
+$laptop: $laptopStart $laptopEnd;
+$fourK: $fourKStart $fourKEnd;
+
+$margin-percent: 15%;  // page gutters
+$container-margin: 0 $margin-percent;
+
+$laptopRows: 2;
+$laptopGutters: 4% 8%;
+$tabletRows: 1;
+$tabletGutters: 4% 8%;
+$mobileRows: 1;
+$mobileGutters: 4% 8%;
+
+// Nav
+// =============================================================================
+//
+$navHeight: 50px;
+$navPadding: 10px;
+$brandFont: Monoton;
+$brandFontWeight: 400;
+$brandLetterSpacing: 1.5px;
+
+// Color Palette
+// =============================================================================
+//
+$yellow: #faf111;
+$green: #89C9B1;
+$darkBlue: #3B539C;
+$blue: #70B4EA;
+$white: #f7f9f6;
+$red: #c22426;
+$dark: #3A566E;
+$bgColor: $blue;
+$textColor: $white;
+$iconColor: $darkBlue;
+$linkColor: $yellow;
+
+$h1Color: $blue;
+$h1ShadowColor: $white;
+$h1StrokeColor: $h1ShadowColor;
+$h2Color: $white;
+$h4Color: $h2Color;
+$h5Color: $h4Color;
+
+$borderColor: $yellow;
+$navHoverColor: lighten($white, 20%);
+$brandColor: $yellow;
+
+$fontOutlineColor: $white;
+$underlineColor: $fontOutlineColor;
+
+// Fonts
+// =============================================================================
+//
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto');
+$headFont: Roboto, Futura, sans-serif;
+$fontOutlineWidth: 1px;  // highest resolution seems to be 1px
+$textFont: Lato, Open Sans;
+$bold: 700;
+$thin: 200;
+$lineHeight: 1.2;
+$modularscale: (
+    base: 1em,
+    ratio: 1.5,
+);
+
+$p-font-sizes: (
+    null: ms(0),
+    $tabletStart: ms(0),
+    $laptopStart: ms(0),
+    $fourKStart: ms(0),
+);
+
+$h1-font-sizes: (
+    null: ms(2),
+    $tabletStart: ms(3),
+    $laptopStart: ms(4),
+    $fourKStart: ms(5),
+);
+
+$h2-font-sizes: (
+    null: ms(0),
+    $tabletStart: ms(0),
+    $laptopStart: ms(1),
+    $fourKStart: ms(1),
+);
+
+$h3-font-sizes: (
+    null: ms(2),
+    $tabletStart: ms(3),
+    $laptopStart: ms(4),
+    $fourKStart: ms(5),
+);
+
+// post titles
+$h4-font-sizes: (
+    null: ms(1),
+    $tabletStart: ms(1),
+    $laptopStart: ms(1),
+    $fourKStart: ms(1),
+);
+
+$h5-font-sizes: (
+    null: ms(0),
+    $tabletStart: ms(-1),
+);
+
+$line-heights: (
+    null: 1.2,
+    $tabletStart: 1.2,
+    $laptopStart: 1.2,
+    $fourKStart: 1.4,
+);
+
+$iconSize: ms(1);
+
+// Headings
+// =============================================================================
+//
+$headTrans: uppercase;
+$headWeight: 100;
+
+$h1Font: $headFont;
+$h1PaddingTop: 50px;
+$h1PaddingBottom: 25px;
+$h1FontSize: 120px;
+$h1FontWeight: $bold;
+$h1MediumScreenSize: 90px;
+$h1LetterSpacing: 10px;
+$h1Stroke: 3px;
+
+$h2PaddingTop: 25px;
+$h2PaddingBottom: 50px;
+$h2PaddingLeft: 0;
+$h2PaddingRight: $h2PaddingLeft;
+
+$h4Font: $headFont;
+
+// Header
+$headerBorderStroke: 5px;
+$headerBorderStyle: solid;
+
+$orgPadT: 5px;
+$orgPadR: 0; 
+$orgPadB: 20px;
+$orgPadL: 0;
+
+// Footer
+// =============================================================================
+$footerBottomMargin: 100px;
+
+// Homepage
+// =============================================================================
+$featuredColumnsLarge: 3;
+$featuredColumnsMedium: $featuredColumnsLarge - 1;
+$featuredColumnsSmall: $featuredColumnsMedium - 1;

@@ -1,0 +1,77 @@
+// nav.scss
+// =============================================================================
+//
+#nav {
+    background-color: $bgColor;
+    position: relative;
+    z-index: 150;
+    height: $navHeight;
+    margin-bottom: $navHeight * -1;
+    @include bottomBorder;
+    padding-top: 15px;
+    
+    &.fixed {
+        @include positionFixed;
+        width: 100% - ($margin-percent * 2);
+    }
+    
+    .brand {
+        text-transform: uppercase;            
+        font-family: $brandFont;
+        font-weight: $brandFontWeight;
+        letter-spacing: $brandLetterSpacing;
+        float: left;
+
+        span.full-name { 
+            display: none;
+            font-size: ms(0);
+        }
+        span.initials { 
+            display: inline; 
+            font-size: $iconSize;
+            
+        }
+
+        @include breakpoint ($laptopStart) {
+            span.full-name { display: inline; }
+            span.initials { display: none; }
+        }   
+    }
+    
+    ul {
+        display: inline;
+        float: right;
+        
+        li {
+            display: inline-block;
+            
+            a {
+                color: $brandColor;
+                text-decoration: none;
+                font-family: $textFont;
+                height: $navHeight;
+                padding: 0 10px;
+                
+                &:hover, &.active { text-decoration: underline; }
+
+                i.fa {
+                    color: inherit;
+                    text-decoration: inherit;
+                } // i
+                
+                span {
+                    display: none;
+                    @include breakpoint ($laptopStart) {
+                        & { display: inline; }
+                    }
+                } // span        
+                
+                @include breakpoint ($laptopStart) {
+                    span { display: inline; }
+                    i.fa { display: none; }
+                }
+                
+            } // a
+        } // li      
+    } // ul
+} // #nav

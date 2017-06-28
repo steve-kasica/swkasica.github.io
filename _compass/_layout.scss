@@ -1,0 +1,67 @@
+// layout.scss
+// ===========
+
+* {
+    box-sizing: border-box;
+}
+a#bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+body {
+    text-align: center;
+    position: absolute;
+    background: $bgColor;
+    @include breakpoint($laptopStart) {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+header {
+    background-color: $bgColor;
+    div {
+        padding: $container-margin;       
+    }
+    @include positionFixed;
+    @include display-flex();
+    @include align-items(center);
+    @include justify-content(center);
+}
+
+nav {
+    margin: $container-margin;
+}
+
+main {
+    padding: $container-margin;
+    padding-top: $navHeight;
+    position: relative;
+    background-color: $bgColor;
+    
+    @include breakpoint($mobile) {
+        padding-top: $navHeight + 25px;
+    }
+    
+    section {
+        
+        @include columns($mobileRows, $mobileGutters);
+        
+        @include breakpoint($tablet) {
+            @include columns($tabletRows, $mobileGutters);
+        }
+    
+        @include breakpoint($laptopStart) {
+            @include columns($laptopRows, $laptopGutters);
+        }
+        
+    }
+    
+}
+
+footer {
+    background-color: $bgColor;
+    padding: $container-margin;
+}

@@ -1,0 +1,62 @@
+{% comment %}
+
+  category.html
+  
+  Note that validTags needs to run unique through it twice, for some reason.
+  
+{% endcomment %}
+
+{% assign initialSort = 'coolness' %}
+{% assign delim = ' ' %}
+{% assign postLimit = 6 %}
+
+{% assign catTotal = site.categories[include.section.category] | size %}
+{% assign posts = site.categories[include.section.category] | sort: initialSort %}
+
+{% capture tags %}
+  {% for article in posts limit:postLimit %}
+    {% for tag in article.tags %}
+      {% assign tagTotal = site.tags[tag] | size %}
+      {% if tagTotal != catTotal and tagTotal != 1 %}
+        {{ tag | strip | append: delim }}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endcapture %}
+
+{% assign validTags = tags | strip | split: delim | uniq | uniq | sort %}
+
+
+<article id="{{include.section.category}}" class="category">
+  <h3><span class="underline">{{ include.section.title }}</u></h3>    
+  <aside>
+    <p id="{{ include.section.category }}-filter" class="filter">Filter by <span id="{{ include.section.category }}-tags" class="checkbox tags">
+      {% for tag in validTags %}
+        <a href="#" id="{{ tag | strip }}">{{ tag | strip | replace: '-', ' ' }}</a>{% if forloop.length == 2 and forloop.rindex == 2 %} and {% elsif forloop.rindex == 2 %}, and {% elsif forloop.rindex > 2 %}, {% endif %}
+      {% endfor %}</span> using <span id="logic" class="radio">
+        <a href="#" id="{{ include.section.category }}-and">AND</a>
+        <a href="#" id="{{ include.section.category }}-or" class="hidden">OR</a>
+      </span> logic. Currently sorted by <span id="sort" class="radio">
+        <a href="#" id="{{ include.section.category }}-coolness">coolness</a>
+        <a href="#" id="{{ include.section.category }}-title" class="hidden">title</a>
+      </span>
+      in <span id="order" class="radio">
+        <a href="#" id="{{ include.section.category }}-asc">ascending</a>
+        <a href="#" id="{{ include.section.category }}-desc" class="hidden">descending</a>
+      </span> order.
+    </p>
+  </aside>
+
+  <div class="grid">
+    {% for post in posts limit:postLimit %}
+      <section class="{{ post.tags | join: ' ' }}">
+        <h4 class="post_title">
+          <a href="{{ post.link }}" target="_blank">{{ post.title }}</a>
+        </h4>
+        <h5>{{ post.org }}</h5>
+        {{ post.content }}
+        <span class="post_coolness hidden">{{ post.coolness }}</span>
+      </section>
+    {% endfor %}
+  </div>
+</article>

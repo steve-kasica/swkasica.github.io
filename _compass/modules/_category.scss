@@ -1,0 +1,49 @@
+// category.scss
+// =============
+
+.category {
+    text-align: center;
+        
+    aside {
+        @include breakpoint ($mobile) {
+            display: none;
+        }
+        
+        label { font-weight: $bold; }
+        
+        .filter {
+            @include line-height($line-heights);
+            font-style: italic;     
+            padding-bottom: 20px;
+            @include breakpoint($laptopStart) {
+                padding: 0 15%;   
+            }
+            
+            .tags {
+                a.active,
+                a:active {
+                    text-decoration: underline;
+                }   
+            }
+        }
+    } // aside
+
+    section {
+        
+        .post_nut_graf {
+            padding: 10px 0;
+        }
+        
+        .post_org {
+            font-style: italic;
+            padding: $orgPadT $orgPadR $orgPadB $orgPadL;
+        }
+        
+        .post_tags {
+            margin-top: 10px;
+            font-size: ms(-1);
+            font-style: italic;
+        }
+        
+    } // section
+}

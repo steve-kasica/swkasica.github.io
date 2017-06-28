@@ -1,0 +1,64 @@
+---
+---
+
+{% assign sections = site.sections | sort: "title" %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 lang=""> <![endif]-->
+<html>
+    <head>
+        <meta charset="{{ site.charset }}">
+        <meta http-equiv="X-UA-Compatiable" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ site.title }}</title>
+        <meta name="description" content="{{ page.description }}">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <header id="landing">
+            <div>
+                <h1>{{ site.first_name }} {{ site.last_name }}</h1>
+                <h2>A portfolio of {% for section in site.sections %}<a href="#{{section.category}}">{{ section.desc | downcase }}</a>{% if forloop.rindex == 2 %}, and {% elsif forloop.rindex > 2 %}, {% endif %}{% endfor %}.</h2>                                
+            </div>
+        </header>
+        
+        <nav id="nav">
+            <a href="#bottom" class="brand">
+                <span class="full-name">{{ site.first_name }}&nbsp;{{ site.last_name }}</span>
+                <span class="initials">{{ site.first_name | slice: 0 }}{{ site.last_name | slice: 0 }}</span>
+            </a>
+            <ul>
+                {% for section in sections %}
+                <li>
+                    <a href="#{{ section.category }}" title="{{ section.title }}">
+                        <span>{{ section.title }}</span>
+                        <i class="icon fa {{ section.icon }}" aria-hidden="true"></i>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        
+        <main>
+            {% for section in sections %}
+                {% include category.html section=section %}
+            {% endfor %}
+        </main>
+        <footer id="contact">
+            <h3>Contact</h3>
+            <div>
+                <p>
+                    {% for link in site.footerLinks %}
+                        <span><strong>{{ link.name }}</strong>:&nbsp;<a href="{{link.href}}" target="_blank">{{ link.username }}</a></span>
+                        <a href="{{link.href}}" target="_blank"><i class="icon fa {{ link.icon }}" aria-hidden="true"></i></a>
+                    {% endfor %}
+                </p>                
+            </div>
+            <a id="bottom"></a>
+        </footer>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="/js/site.js"></script>
+    </body>
+</html>
