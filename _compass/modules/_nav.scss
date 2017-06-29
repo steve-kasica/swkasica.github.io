@@ -13,18 +13,24 @@
     &.fixed {
         @include positionFixed;
         width: 100% - ($margin-percent * 2);
+        @include breakpoint (0 $laptopStart) {
+            width: 100%;
+        }         
     }
     
     .brand {
-        text-transform: uppercase;            
         font-family: $brandFont;
         font-weight: $brandFontWeight;
         letter-spacing: $brandLetterSpacing;
         float: left;
 
         span.full-name { 
+            text-transform: uppercase;            
+            color: $bgColor;            
+            @include fontOutline($brandColor);            
+            letter-spacing: 5px;            
             display: none;
-            font-size: ms(0);
+            font-size: ms(1);
         }
         span.initials { 
             display: inline; 
@@ -46,7 +52,6 @@
             display: inline-block;
             
             a {
-                color: $brandColor;
                 text-decoration: none;
                 font-family: $textFont;
                 height: $navHeight;

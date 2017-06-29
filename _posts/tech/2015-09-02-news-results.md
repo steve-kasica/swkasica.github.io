@@ -1,12 +1,12 @@
 ---
-title: NEWS Visualization
-category: code
+title: N.E.W.S. Visualization
+category: tech
 tags:
     - data-visualization
     - JavaScript
     - open-science
-    - D3
-org: National Oceanic and Atmospheric Administration
+    - D3.js
+org: N.O.A.A.
 coolness: 3
 link: https://www.esrl.noaa.gov/gsd/renewable/news-results
 ---

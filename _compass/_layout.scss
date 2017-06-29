@@ -13,7 +13,7 @@ a#bottom {
 body {
     text-align: center;
     position: absolute;
-    background: $bgColor;
+    background: $coverColor;
     @include breakpoint($laptopStart) {
         width: 100%;
         height: 100%;
@@ -21,9 +21,15 @@ body {
 }
 
 header {
-    background-color: $bgColor;
+    background-color: $coverColor;
+    height: 1000px;
     div {
+        position: relative;
         padding: $container-margin;       
+        .scroll-down {
+            position: absolute;
+            bottom: 0;
+        }        
     }
     @include positionFixed;
     @include display-flex();
@@ -32,7 +38,11 @@ header {
 }
 
 nav {
+    @include breakpoint (0 $laptopStart) {
+        margin: 0;
+    }             
     margin: $container-margin;
+    background-color: $bgColor;    
 }
 
 main {

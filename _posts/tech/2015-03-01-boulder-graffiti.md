@@ -1,6 +1,6 @@
 ---
 title: Boulder Graffiti
-category: code
+category: tech
 tags:
     - social-media-api
     - JavaScript

@@ -10,10 +10,10 @@ sections:
       desc: writing clips
       icon: fa-pencil-square-o
       category: writing
-    - title: Code
-      desc: creative technology
+    - title: Technology
+      desc: creative uses of technology
       icon: fa-code
-      category: code
+      category: tech
     - title: Community
       desc: developer community involvement
       icon: fa-code-fork
@@ -28,6 +28,10 @@ footerLinks:
       href: https://medium.com/@stvkas
       username: "@stvkas"
       icon: fa-medium
+    - name: Twitter
+      href: https://twitter.com/stvkas
+      username: "@stvkas"
+      icon: fa-twitter
     - name: Facebook
       username: stephen.kasica
       href: https://facebook.com/stephen.kasica

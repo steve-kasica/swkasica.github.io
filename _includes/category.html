@@ -53,7 +53,7 @@
         <h4 class="post_title">
           <a href="{{ post.link }}" target="_blank">{{ post.title }}</a>
         </h4>
-        <h5>{{ post.org }}</h5>
+        <p class="post_subtitle">{% if post.category == 'writing' %}<em>{{ post.org }}</em>{% else %}{{ post.org }}{% endif %}{% if post.org AND post.tags %}&nbsp;&nbsp;|&nbsp;&nbsp;{% endif %}{{ post.tags | join:', ' | replace: '-',' ' | strip }}</p>
         {{ post.content }}
         <span class="post_coolness hidden">{{ post.coolness }}</span>
       </section>

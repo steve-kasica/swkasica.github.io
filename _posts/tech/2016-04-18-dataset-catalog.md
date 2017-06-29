@@ -1,12 +1,12 @@
 ---
 title: SOS Dataset Catalog
-category: code
+category: tech
 tags:
     - JavaScript
     - faceted-search
     - backbone
 coolness: 6
-org: National Oceanic and Atmospheric Administration
+org: N.O.A.A.
 link: https://sos.noaa.gov/datasets/catalog
 ---
 

@@ -1,12 +1,12 @@
 ---
-title: SOS RESTful API
-category: code
+title: S.O.S RESTful API
+category: tech
 tags:
     - Python
     - web-services
     - open-science
     - MySQL
-org: National Oceanic and Atmospheric Administration
+org: N.O.A.A.
 coolness: 2
 link: https://sos.noaa.gov/api
 ---

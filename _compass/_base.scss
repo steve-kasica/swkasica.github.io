@@ -23,32 +23,48 @@ i.fa {
 // Headings
 // =============================================================================
 //
+
+// Site title
 h1 {
     @include font-size($h1-font-sizes);
-    @include fontOutline;
+    @include fontOutline($titleColor);
+    color: $coverColor;
     padding-bottom: 20px;
 }
+
+// Cover subtitle
 h2 {
     @include font-size($h2-font-sizes);
     color: $h2Color;
 }
+
+// Section titles
 h3 {
     @include font-size($h3-font-sizes);
     padding: 50px 0;
-    @include fontOutline;
+    color: $sectionBackgroundColor;
+    @include fontOutline($sectionColor);
+    
+    .underline {
+        background-color: $sectionBackgroundColor;        
+        border-bottom: $sectionUnderlineStroke solid $sectionUnderlineColor;
+    }    
 }
 
+// Post titles
 h4 {
     font-weight: $bold;
     font-family: $h4Font;
-    color: $h5Color;
+    color: $postTitleColor;
+    > a {
+        color: inherit;
+    }
     @include font-size($h4-font-sizes);
     padding-bottom: 5px;
 }
-h5 {
-    font-weight: $bold;
-    color: $h5Color;
-    @include font-size($h5-font-sizes);
+p.post_subtitle {
+    color: $postSubtitleColor;
+    @include font-size($postSubtitleFontSizes);
     margin-bottom: 10px;
 }
 
@@ -65,7 +81,6 @@ h1, h3 {
     font-weight: $h1FontWeight;
     text-transform: $headTrans;
     text-align: center;
-    color: $h1Color;
     letter-spacing: $h1LetterSpacing;    
 }
 
@@ -73,6 +88,6 @@ strong {
     font-weight: $bold;
 }
 
-.underline {
-    border-bottom: 5px solid $underlineColor;
+em {
+    font-style: italic;
 }

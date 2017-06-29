@@ -1,6 +1,6 @@
 ---
 title: Strava to Medium Script
-category: code
+category: tech
 tags:
     - social-media-api
     - JavaScript

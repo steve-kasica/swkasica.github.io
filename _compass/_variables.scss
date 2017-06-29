@@ -20,7 +20,7 @@ $tablet: $tabletStart $tabletEnd;
 $laptop: $laptopStart $laptopEnd;
 $fourK: $fourKStart $fourKEnd;
 
-$margin-percent: 15%;  // page gutters
+$margin-percent: 11%;  // page gutters
 $container-margin: 0 $margin-percent;
 
 $laptopRows: 2;
@@ -35,7 +35,7 @@ $mobileGutters: 4% 8%;
 //
 $navHeight: 50px;
 $navPadding: 10px;
-$brandFont: Monoton;
+$brandFont: Roboto;
 $brandFontWeight: 400;
 $brandLetterSpacing: 1.5px;
 
@@ -44,37 +44,44 @@ $brandLetterSpacing: 1.5px;
 //
 $yellow: #faf111;
 $green: #89C9B1;
-$darkBlue: #3B539C;
+$darkBlue: #103260;
 $blue: #70B4EA;
 $white: #f7f9f6;
-$red: #c22426;
-$dark: #3A566E;
-$bgColor: $blue;
-$textColor: $white;
-$iconColor: $darkBlue;
-$linkColor: $yellow;
+$gold: #FFD700;
 
-$h1Color: $blue;
-$h1ShadowColor: $white;
-$h1StrokeColor: $h1ShadowColor;
-$h2Color: $white;
-$h4Color: $h2Color;
-$h5Color: $h4Color;
+$bgColor: $white;
+$textColor: $darkBlue;
+$linkColor: $blue;
 
 $borderColor: $yellow;
-$navHoverColor: lighten($white, 20%);
-$brandColor: $yellow;
+$brandColor: $gold;
 
-$fontOutlineColor: $white;
-$underlineColor: $fontOutlineColor;
+// Title color
+$titleColor: $brandColor;
+$titleShadowColor: $yellow;
+$titleStrokeColor: $titleShadowColor;
+$coverColor: $bgColor;
+
+// subtitle color
+$h2Color: $textColor;
+
+// sections colors
+$sectionColor: $blue;
+$sectionBackgroundColor: $bgColor;
+$sectionUnderlineColor: $sectionColor;
+$sectionUnderlineStroke: 2px;
+
+$postTitleColor: $textColor;
+$postSubtitleColor: desaturate($postTitleColor, 50%);
 
 // Fonts
 // =============================================================================
 //
-@import url('https://fonts.googleapis.com/css?family=Lato|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto:700');
 $headFont: Roboto, Futura, sans-serif;
-$fontOutlineWidth: 1px;  // highest resolution seems to be 1px
 $textFont: Lato, Open Sans;
+
+$fontOutlineWidth: 2px;  // highest resolution seems to be 1px
 $bold: 700;
 $thin: 200;
 $lineHeight: 1.2;
@@ -91,10 +98,10 @@ $p-font-sizes: (
 );
 
 $h1-font-sizes: (
-    null: ms(2),
+    null: ms(3),
     $tabletStart: ms(3),
-    $laptopStart: ms(4),
-    $fourKStart: ms(5),
+    $laptopStart: ms(3),
+    $fourKStart: ms(4),
 );
 
 $h2-font-sizes: (
@@ -119,7 +126,7 @@ $h4-font-sizes: (
     $fourKStart: ms(1),
 );
 
-$h5-font-sizes: (
+$postSubtitleFontSizes: (
     null: ms(0),
     $tabletStart: ms(-1),
 );

@@ -70,10 +70,10 @@
     border-bottom-style: $headerBorderStyle;
 } // bottomBorder
 
-@mixin fontOutline {
+@mixin fontOutline($color) {
     // TODO compass mixin
     -webkit-text-stroke-width: $fontOutlineWidth;
-    -webkit-text-stroke-color: $fontOutlineColor;    
+    -webkit-text-stroke-color: $color;
 }
 
 @mixin blockText {
