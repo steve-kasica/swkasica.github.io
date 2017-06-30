@@ -1,0 +1,25 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+// main.scss
+// =============================================================================
+//
+
+// external libraries
+@import "lib/reset/reset";
+@import "lib/breakpoint/breakpoint";
+@import "lib/sass-flexbox/sass-flexbox";
+@import "lib/modularscale/stylesheets/modularscale";
+
+// core sass
+@import "variables";
+@import "mixins";
+
+// partials
+@import "base";
+@import "category";
+@import "footer";
+@import "layout";
+@import "nav";

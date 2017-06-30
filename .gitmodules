@@ -1,0 +1,12 @@
+[submodule "_sass/lib/breakpoint"]
+	path = _sass/lib/breakpoint
+	url = https://github.com/at-import/breakpoint.git
+[submodule "_sass/lib/modularscale"]
+	path = _sass/lib/modularscale
+	url = https://github.com/modularscale/modularscale-sass.git
+[submodule "_sass/lib/sass-flexbox"]
+	path = _sass/lib/sass-flexbox
+	url = https://github.com/zessx/sass-flexbox.git
+[submodule "_sass/lib/reset"]
+	path = _sass/lib/reset
+	url = https://gist.github.com/1027867.git

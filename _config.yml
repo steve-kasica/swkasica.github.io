@@ -3,7 +3,9 @@
 first_name: Stephen
 last_name: Kasica
 email: stephen.kasica@gmail.com
-description: A portfolio of code and writing by Stephen Kasica
+title: Stephen Kasica Portfolio
+description: A portfolio
+baseurl: ''
 
 sections:
     - title: Writing
@@ -52,13 +54,11 @@ charset: 'utf-8'
 
 # Build settings
 markdown: kramdown
-theme: minima
-
-gems:
-    - jekyll-feed 
-    - jekyll-gist
-    - jekyll-compass
 
 exclude:
   - Gemfile
   - Gemfile.lock
+  
+sass:
+    sass_dir: _sass
+    style: compressed
