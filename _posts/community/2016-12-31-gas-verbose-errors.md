@@ -4,7 +4,7 @@ category: community
 tags: 
     - pull-requests
 org: Python GAS CLI
-coolness: 1
+coolness: 3
 link: https://github.com/joestump/python-gas-cli/pull/3
 ---
 

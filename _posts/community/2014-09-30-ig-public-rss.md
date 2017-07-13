@@ -4,7 +4,7 @@ category: community
 tags:
     - questions
 org: Stack Overflow
-coolness: 3
+coolness: 4
 link: https://stackoverflow.com/questions/26126322/instagrams-public-rss-stopped-working
 ---
 

@@ -4,7 +4,7 @@ category: community
 tags: 
     - questions
 org: Summernote
-coolness: 6
+coolness: 7
 link: https://github.com/summernote/summernote/issues/2308
 ---
 

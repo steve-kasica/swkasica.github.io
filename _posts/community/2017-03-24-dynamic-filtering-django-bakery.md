@@ -4,7 +4,7 @@ category: community
 tags: 
     - issues
 org: Django Bakery
-coolness: 4
+coolness: 5
 link: https://github.com/datadesk/django-bakery/issues/99
 ---
 
