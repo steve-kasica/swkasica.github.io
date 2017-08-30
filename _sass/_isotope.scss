@@ -1,0 +1,39 @@
+
+.isotope {
+    height: 600px;
+    
+    .grid-sizer, 
+    .item-container {
+        @include columnWidth;
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        float: left;
+    }
+    
+    .item {
+        // Section titles
+        padding: 15px;
+        
+        p,.item-title {
+            padding-bottom: 10px;
+        }
+        
+        .nutgraf {
+            @include displaySmall;
+        }
+        
+        .content {
+            @include hideSmall;
+        }
+        
+        .tags {
+            color: $tagColor;
+            font-style: italic;
+        }
+    
+    }
+    
+}
+
+

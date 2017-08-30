@@ -1,0 +1,15 @@
+
+
+.cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    resize: both;
+    overflow: auto;
+    height: 100%;
+    
+    p {
+        width: 33.333333%;
+    }
+}

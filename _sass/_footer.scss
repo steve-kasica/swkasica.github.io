@@ -1,33 +1,26 @@
 
-footer {
+.footer {
     text-align: center;
-    position: relative;
-    
-    h3 {
-        @include font-size($h4-font-sizes);
-        padding-bottom: 10px;
+    margin-top: 10px;
+    ul {
+        @include breakpoint($mobileStart $tabletEnd) {
+            width: 100%;
+            margin-left: 0;
+        }
+        margin-left: 25%;
+        width: 50%;    
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 5px solid #000;
+        li {
+            display: inline-block;
+            list-style: none;
+            padding: 0 10px;
+        }
     }
-    
-    div {
-        padding: 20px 0;
-        p {
-            font-style: italic;
-            line-height: 1.5;
-            
-            span {
-                display: none;
-                padding: 0 10px;
-                font-size: ms(0);
-            }
-            
-            i.fa {
-                padding: 0 10px;
-            }
-            
-            @include breakpoint($laptopStart) {
-                span { display: inline; }
-                i.fa { display: none; }
-            }
-        }        
-    } // div
+    .build {
+        padding-top: 15px;
+        font-size: ms(-1);
+    }
+
 }

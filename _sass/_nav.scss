@@ -1,83 +1,54 @@
-// nav.scss
-// =============================================================================
-//
-#nav {
-    background-color: $bgColor;
-    position: relative;
-    z-index: 150;
-    height: $navHeight;
-    margin-bottom: $navHeight * -1;
-    @include bottomBorder;
-    padding-top: 15px;
-    
-    &.fixed {
-        @include positionFixed;
-        width: 100% - ($margin-percent * 2);
-        @include breakpoint (0 $laptopStart) {
-            width: 100%;
-        }         
+
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 10px;
+
+    @include breakpoint($mobileStart $mobileEnd) {
+        position: relative;
+        padding: 0;
     }
-    
+
     .brand {
-        font-family: $brandFont;
-        font-weight: $brandFontWeight;
-        letter-spacing: $brandLetterSpacing;
-        float: left;
-
-        span.full-name { 
-            text-transform: uppercase;            
+        font-size: ms(1);
+        @include breakpoint($mobileStart $mobileEnd) {
+            display: inline-block;
+            margin-bottom: 10px;
+        }        
+        a {
             color: $bgColor;            
-            @include fontOutline($brandColor);            
-            letter-spacing: 5px;            
-            display: none;
-            font-size: ms(1);
+            text-decoration: none; 
+            background: $brandBgColor;
+            padding: 0 5px;
+            &:hover {
+                background: $linkColor;
+            }
         }
-        span.initials { 
-            display: inline; 
-            font-size: $iconSize;
-            
+        .tagline {
+            @include hideSmall;            
         }
-
-        @include breakpoint ($laptopStart) {
-            span.full-name { display: inline; }
-            span.initials { display: none; }
-        }   
     }
     
     ul {
-        display: inline;
-        float: right;
-       // margin-top: 5px;
-        
+        float: right;        
+        padding-right: 20px;        
+        @include breakpoint($mobileStart $mobileEnd) {
+            width: 100%;
+            float: none;
+            padding: inherit;
+        }
+    
         li {
-            display: inline-block;
-            
-            a {
-                text-decoration: none;
-                font-family: $textFont;
-                height: $navHeight;
-                padding: 0 10px;
-                
-                &:hover, &.active { text-decoration: underline; }
-
-                i.fa {
-                    color: inherit;
-                    text-decoration: inherit;
-                } // i
-                
-                span {
-                    display: none;
-                    @include breakpoint ($laptopStart) {
-                        & { display: inline; }
-                    }
-                } // span        
-                
-                @include breakpoint ($laptopStart) {
-                    span { display: inline; }
-                    i.fa { display: none; }
-                }
-                
-            } // a
-        } // li      
-    } // ul
-} // #nav
+            list-style: none;
+            display: inline;
+            padding: 0 10px;
+            font-size: ms(1);
+            a.active i {
+                color: $activeIconColor;
+            }            
+        }  // li
+    }  // ul
+} // nav

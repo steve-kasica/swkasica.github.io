@@ -2,50 +2,46 @@
 #
 first_name: Stephen
 last_name: Kasica
-email: stephen.kasica@gmail.com
-title: Stephen Kasica Portfolio
-description: A portfolio
+tagline: Full stack developer and journalist
+title: Stephen Kasica | Portfolio
 baseurl: ''
 
-sections:
-    - title: Writing
-      desc: writing clips
-      icon: fa-pencil-square-o
-      category: writing
-    - title: Technology
-      desc: creative uses of technology
-      icon: fa-code
-      category: tech
-    - title: Community
-      desc: developer community involvement
-      icon: fa-code-fork
-      category: community
+collections:
+    software:
+        output: false
+    writing:
+        output: false
+    community:
+        output: false
 
-footerLinks:
-    - name: GitHub
-      username: "@stvkas"
-      href: https://github.com/stvkas
+links:
+    - href: https://github.com/stvkas
       icon: fa-github
-    - name: Medium
-      href: https://medium.com/@stvkas
-      username: "@stvkas"
+      name: GitHub
+    - href: https://medium.com/@stvkas
       icon: fa-medium
-    - name: Twitter
-      href: https://twitter.com/stvkas
-      username: "@stvkas"
+      name: Medium
+    - href: https://twitter.com/stvkas
       icon: fa-twitter
-    - name: Facebook
-      username: stephen.kasica
-      href: https://facebook.com/stephen.kasica
+      name: Twitter
+    - href: https://facebook.com/stephen.kasica
       icon: fa-facebook
-    - name: LinkedIn
-      username: Stephen Kasica
-      href: https://www.linkedin.com/in/kasica/
+      name: Facebook
+    - href: https://instagram.com/stvkas
+      icon: fa-instagram
+      name: Instagram
+    - href: https://www.linkedin.com/in/kasica/
       icon: fa-linkedin-square
-    - name: Stack Overflow
-      username: "@kas"
-      href: https://stackoverflow.com/users/3734991/kas
+      name: LinkedIn
+    - href: https://stackoverflow.com/users/3734991/kas
       icon: fa-stack-overflow
+      name: Stack Overflow
+    - href: mailto:stephen.kasica@noaa.gov
+      icon: fa-envelope
+      name: Email
+    - href: tel:+13034975447
+      icon: fa-phone
+      name: Phone
 
 permalink: none
 

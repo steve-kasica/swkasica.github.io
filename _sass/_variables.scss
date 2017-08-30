@@ -1,11 +1,5 @@
-/**
- * _variables.scss
- *
- */
- 
+
 // Layout
-// =============================================================================
-//
 $mobileStart: 320px;
 $mobileEnd: 425px;
 $tabletStart: $mobileEnd + 1px;
@@ -14,169 +8,32 @@ $laptopStart: $tabletEnd + 1px;
 $laptopEnd: 1439px;
 $fourKStart: $laptopEnd + 1px;
 $fourKEnd: 2560px;
-
-$mobile: $mobileStart $mobileEnd;
-$tablet: $tabletStart $tabletEnd;
-$laptop: $laptopStart $laptopEnd;
-$fourK: $fourKStart $fourKEnd;
-
-$margin-percent: 11%;  // page gutters
-$container-margin: 0 $margin-percent;
-
-$laptopRows: 2;
-$laptopGutters: 4% 8%;
-$tabletRows: 1;
-$tabletGutters: 4% 8%;
-$mobileRows: 1;
-$mobileGutters: 4% 8%;
-
-// Nav
-// =============================================================================
-//
-$navHeight: 50px;
-$navPadding: 10px;
-$brandFont: Roboto;
-$brandFontWeight: 400;
-$brandLetterSpacing: 1.5px;
+$pageGutters: 10%;
 
 // Color Palette
-// =============================================================================
-//
-$yellow: #faf111;
-$green: #89C9B1;
-$darkBlue: #103260;
-$blue: #70B4EA;
-$white: #f7f9f6;
-$gold: #FFD700;
+$yellow: #F6E481;
+$brown: #4F4543;
+$red: #D24027;
+$blue: #337DAE;
+$green: #359E99;
 
-$bgColor: $white;
-$textColor: $darkBlue;
-$linkColor: $blue;
+$bgColor: lighten($blue, 45%);
+$textColor: darken($brown, 10%);
+$linkColor: lighten($blue, 0%);
+$tagColor: lighten($green, 15%);
 
-$borderColor: $yellow;
-$brandColor: $gold;
+$hColor: $textColor;
+$activeIconColor: $textColor;
+$tooltipColor: $textColor;
+$brandBgColor: $textColor;
 
-// Title color
-$titleColor: $brandColor;
-$titleShadowColor: $yellow;
-$titleStrokeColor: $titleShadowColor;
-$coverColor: $bgColor;
-
-// subtitle color
-$h2Color: $textColor;
-
-// sections colors
-$sectionColor: $blue;
-$sectionBackgroundColor: $bgColor;
-$sectionUnderlineColor: $sectionColor;
-$sectionUnderlineStroke: 2px;
-
-$postTitleColor: $textColor;
-$postSubtitleColor: desaturate($postTitleColor, 50%);
-
-// Fonts
-// =============================================================================
-//
-@import url('https://fonts.googleapis.com/css?family=Lato|Roboto:700');
-$headFont: Roboto, Futura, sans-serif;
-$textFont: Lato, Open Sans;
-
-$fontOutlineWidth: 2px;  // highest resolution seems to be 1px
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Zilla+Slab:600');
+$textFont: Source Sans Pro, sans-serif;
+$hFont: Zilla Slab, serif;
 $bold: 700;
-$thin: 200;
-$lineHeight: 1.2;
+$lineHeight: 1.25;
 $modularscale: (
     base: 1em,
     ratio: 1.5,
 );
-
-$p-font-sizes: (
-    null: ms(0),
-    $tabletStart: ms(0),
-    $laptopStart: ms(0),
-    $fourKStart: ms(0),
-);
-
-$h1-font-sizes: (
-    null: ms(3),
-    $tabletStart: ms(3),
-    $laptopStart: ms(3),
-    $fourKStart: ms(4),
-);
-
-$h2-font-sizes: (
-    null: ms(0),
-    $tabletStart: ms(0),
-    $laptopStart: ms(1),
-    $fourKStart: ms(1),
-);
-
-$h3-font-sizes: (
-    null: ms(2),
-    $tabletStart: ms(3),
-    $laptopStart: ms(4),
-    $fourKStart: ms(5),
-);
-
-// post titles
-$h4-font-sizes: (
-    null: ms(1),
-    $tabletStart: ms(1),
-    $laptopStart: ms(1),
-    $fourKStart: ms(1),
-);
-
-$postSubtitleFontSizes: (
-    null: ms(0),
-    $tabletStart: ms(-1),
-);
-
-$line-heights: (
-    null: 1.2,
-    $tabletStart: 1.2,
-    $laptopStart: 1.2,
-    $fourKStart: 1.4,
-);
-
-$iconSize: ms(1);
-
-// Headings
-// =============================================================================
-//
-$headTrans: uppercase;
-$headWeight: 100;
-
-$h1Font: $headFont;
-$h1PaddingTop: 50px;
-$h1PaddingBottom: 25px;
-$h1FontSize: 120px;
-$h1FontWeight: $bold;
-$h1MediumScreenSize: 90px;
-$h1LetterSpacing: 10px;
-$h1Stroke: 3px;
-
-$h2PaddingTop: 25px;
-$h2PaddingBottom: 50px;
-$h2PaddingLeft: 0;
-$h2PaddingRight: $h2PaddingLeft;
-
-$h4Font: $headFont;
-
-// Header
-$headerBorderStroke: 5px;
-$headerBorderStyle: solid;
-
-$orgPadT: 5px;
-$orgPadR: 0; 
-$orgPadB: 20px;
-$orgPadL: 0;
-
-// Footer
-// =============================================================================
-$footerBottomMargin: 100px;
-
-// Homepage
-// =============================================================================
-$featuredColumnsLarge: 3;
-$featuredColumnsMedium: $featuredColumnsLarge - 1;
-$featuredColumnsSmall: $featuredColumnsMedium - 1;

@@ -1,93 +1,82 @@
 // base.scss
-// =============================================================================
-//
 
 body {
-    font-family: $textFont;
+    background: $bgColor;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: $pageGutters;
+    @include breakpoint($mobileStart $mobileEnd) {
+        text-align: center;
+    }
+}
+
+em {
+    font-style: italic;
 }
 
 p {
-    @include font-size($p-font-sizes);
-    color: $textColor;
-    font-weight: $thin;
-}
-
-h1,h2,h3,h4,h5,p {
-    @include line-height($line-heights);    
-}
-
-i.fa {
-    font-size: $iconSize;
-}
-
-// Headings
-// =============================================================================
-//
-
-// Site title
-h1 {
-    @include font-size($h1-font-sizes);
-    @include fontOutline($titleColor);
-    color: $coverColor;
-    padding-bottom: 20px;
-}
-
-// Cover subtitle
-h2 {
-    @include font-size($h2-font-sizes);
-    color: $h2Color;
-}
-
-// Section titles
-h3 {
-    @include font-size($h3-font-sizes);
-    padding: 50px 0;
-    color: $sectionBackgroundColor;
-    @include fontOutline($sectionColor);
-    
-    .underline {
-        background-color: $sectionBackgroundColor;        
-        border-bottom: $sectionUnderlineStroke solid $sectionUnderlineColor;
-    }    
-}
-
-// Post titles
-h4 {
+    font-family: $textFont;
     font-weight: $bold;
-    font-family: $h4Font;
-    color: $postTitleColor;
-    > a {
-        color: inherit;
-    }
-    @include font-size($h4-font-sizes);
-    padding-bottom: 5px;
+    color: $textColor;
+    line-height: $lineHeight;
+    font-size: ms(0);
 }
-p.post_subtitle {
-    color: $postSubtitleColor;
-    @include font-size($postSubtitleFontSizes);
+
+h1 { 
+    font-size: ms(3);  
+    border-bottom: 10px solid $hColor;
+    padding-bottom: 20px;
     margin-bottom: 10px;
+}
+h2 { font-size: ms(1);  }
+h3 { font-size: ms(1);  }
+h4 { font-size: ms(0);  }
+h5 { font-size: ms(-1); }
+h6 { font-size: ms(-2); }
+
+h1,h2,h3,h4,h5,h6,.brand {
+    font-family: $hFont;
+    color: $hColor;
+}
+
+a {
+    color: $linkColor;
+    text-decoration: none;
+    font-weight: bold;
+    
+    &:hover {
+        text-decoration: underline;
+        color: $linkColor;
+        span {
+            background-color: $linkColor;
+        }
+    }
 }
 
 .hidden {
     display: none;
 }
 
-a {
-    @include href($linkColor);
-}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    
+    .tooltip-text {
+        visibility: hidden;
+        top: 100%;
+        left: 50%;
+        width: 100px;                    
+        margin-left: -50px; /* Use half of the width (120/2 = 60), to center the tooltip */                    
+        color: $tooltipColor;
+        text-align: center;
+        padding: 5px 0;
+        background: none;
+        position: absolute;
+        z-index: 1;
+        font-size: ms(-1);
+    }
 
-h1, h3 {
-    font-family: $h1Font;
-    font-weight: $h1FontWeight;
-    text-transform: $headTrans;
-    text-align: center;
-    letter-spacing: $h1LetterSpacing;    
-}
-
-strong {
-    font-weight: $bold;
-}
-
-em {
-    font-style: italic;
-}
+    &:hover .tooltip-text {
+        visibility: visible;                
+    }
+}  // .tooltip

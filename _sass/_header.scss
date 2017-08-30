@@ -1,0 +1,18 @@
+
+.header {
+    padding: 15px;
+    
+    .filter {
+        padding-top: 15px;
+        @include hideSmall;
+        .checkbox {
+            a {
+                text-decoration: line-through;
+            
+                &.active {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
