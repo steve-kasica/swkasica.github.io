@@ -1,7 +1,6 @@
 ---
 title: NEWS Visualization
 tags:
- - NOAA
  - Data Visualization
  - JavaScript
 coolness: 3

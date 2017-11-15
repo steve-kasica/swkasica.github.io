@@ -2,7 +2,7 @@
 title: Snapbot Sightings
 tags:
  - JavaScript
-coolness: 5
+coolness: 4
 link: https://stvkas.github.io/snapbot_sightings/
 nutgraf: An automated email notification system for Snapbot sightings built on Google Apps Script.
 ---

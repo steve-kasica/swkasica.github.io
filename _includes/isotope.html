@@ -1,0 +1,25 @@
+
+{% assign projects = site[include.collection] | sort: 'coolness' %}
+
+{% assign delim = '^' %}
+{% capture tags %}
+  {% for p in projects %}{% for tag in p.tags %}{{ tag | strip | append: delim }}{% endfor %}{% endfor %}
+{% endcapture %}
+{% assign tSize = tags | strip | size | minus: 1 %}
+{% assign testTags = tags | strip | slice: 0, tSize | split: delim | uniq | size %}
+{% assign validTags = tags | strip | slice: 0, tSize | split: delim | uniq | sort %}
+
+<header class="header">
+    <h3>{{ include.collection | replace: '_', ' ' | capitalize }}</h3>
+    <p class="filter">Filtering by <span class="checkbox">{% for t in validTags %}<a href='#' class="active" datavalue="{{ t | downcase | replace: ' ', '-' }}" datakey="checkbox">{{ t }}</a>{% if forloop.rindex0 > 1 %}, {% elsif forloop.rindex0 == 1 %},</span> <span class="radio logic"><a href="#" datakey="logic" datavalue="xor">xor</a><a href="#" class="hidden" datavalue="or" datakey="logic">or</a><a href="#" datavalue="and" datakey="logic" class="hidden">and</a></span><span class="checkbox"> {% endif %}{% endfor %}</span>. Sorted by <span class="radio"><a href="#" datavalue="coolness" datakey="sort">coolness</a><a href="#" datakey="sort" datavalue="title" class="hidden">title</a></span> in <span class="order radio"><a href="#" datavalue="asc" datakey="order">ascending</a><a href="#" datavalue="desc" class="hidden" datakey="order">descending</a></span> order.</p>
+</header>
+<div class="isotope" data-layout="{{include.layout}}">
+    {% for p in projects %}
+        <div class="item-container {{include.layout}} {{ p.tags | join: '^' | downcase | replace: ' ', '-' | replace: '^', ' ' }}" data-coolness="{{ p.coolness }}" data-title="{{p.title | slugify }}">        
+            <div class="item">
+                {% include item/{{include.layout}}.html p=p %}                
+            </div>
+        </div>
+    {% endfor %}
+    <div class="grid-sizer hidden"></div>    
+</div>

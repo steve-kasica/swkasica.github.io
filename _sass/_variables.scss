@@ -11,18 +11,21 @@ $fourKEnd: 2560px;
 $pageGutters: 10%;
 
 // Color Palette
+$white: #ffffff;
+$black: #000000;
 $yellow: #F6E481;
 $brown: #4F4543;
 $red: #D24027;
 $blue: #337DAE;
 $green: #359E99;
 
-$bgColor: lighten($blue, 45%);
-$textColor: darken($brown, 10%);
+$bgColor: $white;
+$textColor: $black;
 $linkColor: lighten($blue, 0%);
 $tagColor: lighten($green, 15%);
 
 $hColor: $textColor;
+$headingBorderWidth: 5px;
 $activeIconColor: $textColor;
 $tooltipColor: $textColor;
 $brandBgColor: $textColor;

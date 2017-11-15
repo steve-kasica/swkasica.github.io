@@ -2,6 +2,16 @@
 layout: base
 ---
 
-<main class="cover">
-    <p>I'm a software developer currently working on web services and data visualization projects within NOAA's Advanced Technology and Outreach branch. This is my personal website and includes a portfolio of my most recent <a href="/software-developer">software projects</a> and <a href="/floss-contributor">contributions I've made in the open-source community</a>. Before coming to software, I was in editorial journalism, and the <a href="/writer">clips page</a> contains a sample of my written work.</p>
-</main>
+{% assign sections = site.collections | sort: 'order' %}
+
+{% for section in sections %}
+    {% if section.label != 'posts' %}
+        <section>
+            {% include isotope.html collection=section.label layout=section.layout %}
+        </section>
+    {% endif %}
+{% endfor %}
+
+<!--<main class="cover">-->
+<!--    <p>I'm a software developer currently working on web services and data visualization projects within NOAA's Advanced Technology and Outreach branch. This is my personal website and includes a portfolio of my most recent <a href="/software-developer">software projects</a> and <a href="/floss-contributor">contributions I've made in the open-source community</a>. Before coming to software, I was in editorial journalism, and the <a href="/writer">clips page</a> contains a sample of my written work.</p>-->
+<!--</main>-->

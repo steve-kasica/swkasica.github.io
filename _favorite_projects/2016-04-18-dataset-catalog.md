@@ -1,9 +1,8 @@
 ---
 title: SOS Dataset Catalog
 tags:
- - NOAA
  - JavaScript
-coolness: 6
+coolness: 5
 link: https://sos.noaa.gov/datasets/catalog
 nutgraf: A faceted-search web application for browsing more than 500 Science On a Sphere datasets currated by NOAA.
 ---

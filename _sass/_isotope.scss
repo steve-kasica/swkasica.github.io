@@ -4,11 +4,20 @@
     
     .grid-sizer, 
     .item-container {
-        @include columnWidth;
-        display: inline-block;
-        zoom: 1;
-        *display: inline;
-        float: left;
+        &.fitRows, &.masonry {
+            @include columnWidth;
+            display: inline-block;
+            zoom: 1;
+            *display: inline;
+            float: left;            
+        }
+        &.vertical {
+            width: 100%;
+            
+            h4 {
+                display: inline-block;
+            }
+        }
     }
     
     .item {

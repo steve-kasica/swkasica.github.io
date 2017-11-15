@@ -20,7 +20,7 @@
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
         
-          ga('create', 'UA-88748945-1', 'auto');
+          ga('create', '{{ site.analytics_code }}', 'auto');
           ga('send', 'pageview');
         
         </script>        
@@ -40,6 +40,17 @@
             </ul>
         </nav>
         {{ content }}
+        <footer class="footer">
+            <ul><span>
+            {% for l in site.links %}
+                <li><a href="{{ l.href }}" class="tooltip">
+                    <i class="fa {{ l.icon }}"></i>
+                    <span class="tooltip-text">{{ l.name }}</span>
+                </a></li>
+            {% endfor %}            
+            </span></ul> 
+            <p class="build">This site was last updated on {{ site.time | date_to_long_string }}</p>
+        </footer>        
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
         <script type="text/javascript" src="/js/site.js"></script>

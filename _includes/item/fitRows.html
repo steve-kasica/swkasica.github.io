@@ -1,0 +1,6 @@
+<h4 class="item-title"><a href="{{ p.link }}">{{ p.title }}</a></h4>
+<p class="tags">{{ p.tags | join: ', ' | strip }}</p>
+{% if p.nutgraf %}
+<p class="nutgraf">{{ p.nutgraf }}</p>
+{% endif %}
+<div class="content">{{ p.content }}</div>

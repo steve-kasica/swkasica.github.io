@@ -1,7 +1,6 @@
 ---
 title: SOS RESTful API
 tags:
- - NOAA
  - Python
  - MySQL
 coolness: 2
