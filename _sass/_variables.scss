@@ -18,14 +18,18 @@ $brown: #4F4543;
 $red: #D24027;
 $blue: #337DAE;
 $green: #359E99;
-
 $bgColor: $white;
+$footerBg: $blue;
 $textColor: $black;
 $linkColor: lighten($blue, 0%);
-$tagColor: lighten($green, 15%);
+$tagColor: lighten($black, 50%);
+$filterColor: $green;
 
+// Headings
 $hColor: $textColor;
-$headingBorderWidth: 5px;
+$headingBorderStyle: 2px solid $black;
+$hFont: Zilla Slab, serif;
+
 $activeIconColor: $textColor;
 $tooltipColor: $textColor;
 $brandBgColor: $textColor;
@@ -33,7 +37,9 @@ $brandBgColor: $textColor;
 // Typography
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Zilla+Slab:600');
 $textFont: Source Sans Pro, sans-serif;
-$hFont: Zilla Slab, serif;
+
+$filterFont: $textFont;
+
 $bold: 700;
 $lineHeight: 1.25;
 $modularscale: (

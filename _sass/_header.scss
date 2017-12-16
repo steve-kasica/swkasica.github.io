@@ -1,14 +1,21 @@
 .header {
     padding: 15px;
     
-    h3 {
-        border-bottom: $headingBorderWidth solid $blue;
+    .section-header {
+        border-bottom: $headingBorderStyle;
         padding-bottom: 5px;
     }
     
     .filter {
         padding-top: 15px;
         @include hideSmall;
+        a {
+            color: $filterColor;
+            font-family: $filterFont;                
+            &:hover {
+                text-decoration: none;                        
+            }
+        }        
         .checkbox {
             a {
                 text-decoration: line-through;

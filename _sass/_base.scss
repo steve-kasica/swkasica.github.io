@@ -22,13 +22,7 @@ p {
     font-size: ms(0);
 }
 
-h1 { 
-    font-size: ms(3);  
-    border-bottom: 10px solid $hColor;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
-}
-h2 { font-size: ms(1);  }
+h2 { font-size: ms(2);  }
 h3 { font-size: ms(1);  }
 h4 { font-size: ms(0);  }
 h5 { font-size: ms(-1); }
@@ -37,6 +31,22 @@ h6 { font-size: ms(-2); }
 h1,h2,h3,h4,h5,h6,.brand {
     font-family: $hFont;
     color: $hColor;
+}
+
+h1 { 
+    span {
+        cursor: pointer;        
+    }
+    font-size: ms(3);  
+    @include breakpoint($mobileStart $mobileEnd) {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    color: $white;
+    span {
+        background: $brandBgColor;        
+        padding: 0 10px;        
+    }
 }
 
 a {

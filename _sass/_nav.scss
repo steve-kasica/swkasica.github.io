@@ -9,26 +9,6 @@
         position: relative;
         padding: 0;
     }
-
-    .brand {
-        font-size: ms(1);
-        @include breakpoint($mobileStart $mobileEnd) {
-            display: inline-block;
-            margin-bottom: 10px;
-        }        
-        a {
-            color: $bgColor;            
-            text-decoration: none; 
-            background: $brandBgColor;
-            padding: 0 5px;
-            &:hover {
-                background: $linkColor;
-            }
-        }
-        .tagline {
-            @include hideSmall;            
-        }
-    }
     
     ul {
         float: right;        

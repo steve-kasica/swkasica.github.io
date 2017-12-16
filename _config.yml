@@ -2,21 +2,20 @@
 #
 first_name: Stephen
 last_name: Kasica
-tagline: Full stack developer and journalist
 title: Stephen Kasica | Portfolio
 baseurl: ''
 analytics_code: 'UA-88748945-1'
 
 collections:
-    favorite_projects:
+    projects:
         output: false
         layout: 'fitRows'
         order: 1
-    published_material:
+    writing:
         output: false
         layout: 'vertical'
         order: 3
-    open_source_contributions:
+    open_source:
         output: false
         layout: 'fitRows'
         order: 2

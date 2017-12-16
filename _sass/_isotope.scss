@@ -43,6 +43,28 @@
     
     }
     
-}
+    h3 {
+        a {
+            color: $textColor;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+                color: $linkColor;
+            }
+        }
+    }
+    
+    &.vertical {
+        h3 {
+            font-size: ms(0);
+            display: inline;
+        }
+        
+        .item {
+            padding: 5px 10px;
+        }
+    }
+    
+} // isotope
 
 

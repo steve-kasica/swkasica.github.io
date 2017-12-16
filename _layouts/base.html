@@ -27,7 +27,7 @@
     </head>
     <body>
         <nav class="nav">
-            <span class="brand"><a href="/">{{ site.first_name }} {{ site.last_name }}</a>{%if page.title %} <span class="tagline">{{ page.title | strip }}</span>{% endif %}</span>
+            <h1><span>{{ site.first_name }}&nbsp;{{ site.last_name }}</span></h1>
             <ul>
                 {% for p in site.pages %}
                 {% if p.path contains '.md' %}

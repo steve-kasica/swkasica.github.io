@@ -1,7 +1,7 @@
 ---
 title: Python GAS CLI
 tags: 
- - pending pull requests
+ - pull requests
 coolness: 3
 link: https://github.com/joestump/python-gas-cli/pull/3
 nutgraf: An enhancement that makes error message more verbose when "deploying" Google Apps Script code.
