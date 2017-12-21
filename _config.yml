@@ -17,7 +17,7 @@ collections:
         order: 3
     open_source:
         output: false
-        layout: 'fitRows'
+        layout: 'vertical'
         order: 2
 
 links:

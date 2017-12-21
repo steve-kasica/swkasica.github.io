@@ -1,8 +1,8 @@
 ---
-title: Django Summernote
-tags: 
+title: Set Attachment Instance Name to Filename as Default
+tags:
  - pull requests
-coolness: 3
+coolness: 4
 link: https://github.com/summernote/django-summernote/pull/178
+org: django-summernote
 ---
-`django-summernote` allows you to embed the Summernote WYSIWYG editor into Django projects.

@@ -17,16 +17,17 @@ $yellow: #F6E481;
 $brown: #4F4543;
 $red: #D24027;
 $blue: #337DAE;
-$green: #359E99;
+$green: #8BEAD8;
 $bgColor: $white;
 $footerBg: $blue;
 $textColor: $black;
 $linkColor: lighten($blue, 0%);
 $tagColor: lighten($black, 50%);
-$filterColor: $green;
+$filterColor: darken($green, 20%);
 
 // Headings
 $hColor: $textColor;
+$h1BgColor: $black;
 $headingBorderStyle: 2px solid $black;
 $hFont: Zilla Slab, serif;
 

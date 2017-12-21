@@ -34,18 +34,16 @@ h1,h2,h3,h4,h5,h6,.brand {
 }
 
 h1 { 
-    span {
-        cursor: pointer;        
-    }
-    font-size: ms(3);  
+    color: $bgColor;
+    font-size: ms(3);    
     @include breakpoint($mobileStart $mobileEnd) {
         display: inline-block;
         margin-bottom: 10px;
-    }
-    color: $white;
+    }    
     span {
-        background: $brandBgColor;        
         padding: 0 10px;        
+        background-color: $h1BgColor;
+        cursor: pointer;        
     }
 }
 

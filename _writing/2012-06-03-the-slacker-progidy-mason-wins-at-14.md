@@ -1,9 +1,10 @@
 ---
 title: 'The "Slacker" prodigy: Mason wins at 14'
 tags:
- - Vail Daily
+ - editorial
 coolness: 6
 link: http://www.vaildaily.com/news/sports/the-slacker-prodigy-mason-wins-at-14/
+org: Vail Daily
 nutgraf: Coverage of the inaugural slackline competition at the 2012 Teva Mountain Games.
 ---
 
