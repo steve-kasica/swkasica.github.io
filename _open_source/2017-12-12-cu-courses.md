@@ -2,7 +2,7 @@
 title: cu-courses
 tags: 
  - repos
-coolness: 1
+coolness: 2
 link: https://github.com/stvkas/cu-courses
 org: GitHub
 nutgraf: A scraper for the University of Colorado Boulder Course Catalog
