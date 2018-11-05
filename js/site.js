@@ -2,14 +2,19 @@
 
 $(document).ready(function() {
     'use strict'
+    var hidden = 'd-none';  // bootstrap class for display: none; style
+    
+    // Enable all tooltips
+    $('[data-toggle="tooltip"]').tooltip()
+
     
     // Trigger cycle toggle on radio filters
     $('.radio > a').click(function(e) {
         e.preventDefault();
         var $el = $(this);
         var sibs = $el.parent().children();        
-        $el.addClass('hidden');
-        sibs.eq((sibs.index($el) + 1) % sibs.length).removeClass('hidden');
+        $el.addClass(hidden);
+        sibs.eq((sibs.index($el) + 1) % sibs.length).removeClass(hidden);
     });
     
     // Trigger strikethrough-underline toggle on checkbox filters.
@@ -29,7 +34,7 @@ $(document).ready(function() {
                 var $el = $(el);
                 if ($el.attr('datakey') === 'checkbox') {
                      out[$el.attr('datavalue')] = ($el.hasClass('active')) ? true : false;
-                } else if (!$el.hasClass('hidden')) {
+                } else if (!$el.hasClass(hidden)) {
                     out[$el.attr('datakey')] = $el.attr('datavalue');
                 }
             });
@@ -70,7 +75,7 @@ $(document).ready(function() {
             if (key === 'checkbox') {
                 $el.filterSettings[val] = !$el.filterSettings[val];
             } else {
-                $el.filterSettings[key] = $header.find('a[datakey=' + key + ']').not('.hidden').attr('datavalue');
+                $el.filterSettings[key] = $header.find('a[datakey=' + key + ']').not('.' + hidden).attr('datavalue');
             }
             
             $el.isotope({

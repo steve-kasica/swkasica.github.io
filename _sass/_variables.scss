@@ -1,5 +1,31 @@
+//
+// _sass/_variables.scss
+//
+$modularscale: (
+  base: 1em,
+  ratio: 1.5
+);
+
+$title_font_size: ms(2);
+$text_size: ms(0);
+$section_font_size: ms(1);
+$section_desc_font_size: $text_size + 0.1;
+
+$h1_font_size: $title_font_size;    // Site title
+$h2_font_size: $section_font_size;  // sections, e.g. articles
+$p_font_size: $text_size;
 
 // Layout
+$title_margin_bottom: 50px;
+
+// Style
+$border_style: 2px black solid;    // Underline under site title
+
+/// OLD LAYOUT
+
+// Layout
+$maxWidth: 60em;
+
 $mobileStart: 320px;
 $mobileEnd: 425px;
 $tabletStart: $mobileEnd + 1px;

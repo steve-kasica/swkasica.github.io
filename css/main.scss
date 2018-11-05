@@ -5,19 +5,15 @@
 // main.scss
 
 // external libraries
-@import "lib/reset/reset";
-@import "lib/breakpoint/stylesheets/breakpoint";
-//@import "lib/sass-flexbox/sass-flexbox";
+// @import "lib/reset/reset";
 @import "lib/modularscale/stylesheets/modularscale";
 
 // core sass
 @import "variables";
-@import "mixins";
-
-@import "section";
-@import "header";
 @import "base";
-@import "isotope";
-@import "cover";
-@import "nav";
+
+// custom styles
+@import "filter";
 @import "footer";
+@import "isotope";
+@import "typewrite";

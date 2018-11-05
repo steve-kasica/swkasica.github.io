@@ -1,11 +1,10 @@
-
+//
+// _sass/_isotope.scss
+//
 .isotope {
-    height: 600px;
-    
     .grid-sizer, 
     .item-container {
         &.fitRows, &.masonry {
-            @include columnWidth;
             display: inline-block;
             zoom: 1;
             *display: inline;
@@ -13,58 +12,27 @@
         }
         &.vertical {
             width: 100%;
-            
             h4 {
                 display: inline-block;
             }
         }
-    }
-    
+    }  // .item-container
     .item {
-        // Section titles
-        padding: 15px;
-        
-        p,.item-title {
-            padding-bottom: 10px;
-        }
-        
-        .nutgraf {
-            @include displaySmall;
-        }
-        
-        .content {
-            @include hideSmall;
-        }
-        
-        .tags {
-            color: $tagColor;
-            font-style: italic;
-        }
-    
-    }
-    
-    h3 {
-        a {
-            color: $textColor;
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-                color: $linkColor;
-            }
-        }
-    }
-    
-    &.vertical {
-        h3 {
-            font-size: ms(0);
-            display: inline;
-        }
-        
-        .item {
-            padding: 10px 15px;
-        }
-    }
-    
+        .item-label {
+            margin-top: auto;
+            margin-bottom: auto;
+            p {
+                font-style: italic;
+                font-size: 80%;
+                color: #999;
+                text-align: right; 
+                a {
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }  // a
+            }  // p
+        }  // .item-label
+    }  // .item
 } // isotope
-
-

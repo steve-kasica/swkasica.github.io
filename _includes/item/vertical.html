@@ -1,1 +1,9 @@
-<h3><a href="{{p.link}}">{{p.title}},</a></h3> <em>{{ p.org }}</em>, {{ p.date | date: '%B %e, %Y' }}</p>
+<div class="row">
+    <div class="col-md-3 item-label hidden-sm">
+        <p>{{ p.org }}</p>
+    </div>
+    <div class="col-sm-12 col-md-9">
+        {{ p.content }}
+    </div>g
+</div>
+<!--<em>{{ p.org }}</em>, {{ p.date | date: '%B %e, %Y' }}-->

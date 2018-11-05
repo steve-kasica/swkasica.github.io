@@ -1,0 +1,10 @@
+{% assign collections = site.collections | sort: 'order' %}
+
+<h3 class="masthead-brand"></h3>
+<nav class="nav nav-masthead justify-content-center">
+  {% for c in collections %}
+    {% if c.label != 'posts' %}
+        <a class="nav-link" href="#{{ c.label }}">{{ c.label | capitalize }}</a>
+    {% endif %}
+    {% endfor %}
+</nav>

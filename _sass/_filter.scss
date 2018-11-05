@@ -1,14 +1,12 @@
-.header {
-    padding: 15px;
+//
+// _sass/_filter.scss
+//
+
+.filter {
+    right: 50px;
     
-    .section-header {
-        border-bottom: $headingBorderStyle;
-        padding-bottom: 5px;
-    }
-    
-    .filter {
+    p {
         padding-top: 15px;
-        @include hideSmall;
         a {
             color: $filterColor;
             font-family: $filterFont;                

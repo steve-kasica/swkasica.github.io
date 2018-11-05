@@ -1,0 +1,15 @@
+<footer class="row">
+    <div class="col">
+    <ul><span>
+        {% for l in site.links %}
+        <li>
+            <a href="{{ l.href }}" data-toggle="tooltip" data-placement="top" title="{{ l.name }}">
+                <i class="fa {{ l.icon }}"></i>
+            </a>
+        </li>
+        {% endfor %}
+    </span></ul>
+    
+    <p class="build">This site was last updated on {{ site.time | date_to_long_string }}</p>        
+    </div>
+</footer>

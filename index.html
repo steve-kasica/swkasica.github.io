@@ -1,13 +1,45 @@
----
-layout: base
+--- 
+layout: base 
+extra_js: typewriter.js
+title: Portfolio
 ---
 
 {% assign sections = site.collections | sort: 'order' %}
 
-{% for section in sections %}
-    {% if section.label != 'posts' %}
-        <section>
-            {% include isotope.html collection=section.label layout=section.layout %}
-        </section>
-    {% endif %}
-{% endfor %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="row">
+        <div class="offset-md-3 col-md-9">
+          <h1>{{ site.name }}:&nbsp;{{ page.title }}</h1>
+        </div>
+      </div> <!--/ .row -->
+      {% for section in sections %}
+      {% if section.label != "posts" %}
+      <div class="row">
+        <div class="offset-md-3 col-md-9">
+          <h2 id="{{ include.collection }}" class="section-header">{{ section.label | replace: '_', ' ' | capitalize }}</h2>
+          <p class="section-desc">{{ section.desc }}</p>
+        </div>
+      </div> <!--/ .row -->
+      <section>
+        {% include isotope.html collection=section.label layout=section.layout %}
+      </section>
+      {% endif %}
+      {% endfor %}
+      <!--<h2 id="title" class="typewrite" data-type='{{ site.taglines | join: "^|" }}' data-period="{{site.tag_cycle}}">-->
+      <!--  <span class="wrap"></span>-->
+      <!--</h2>-->
+    <div class="row">
+      <div class="offset-md-3 col-md-9">
+        {% include footer.html %}                 
+      </div>      
+    </div>
+    </div> <!--/ .col-md-9 -->
+
+    <!--  <div class="col-md-2 position-fixed filter">      -->
+    <!--</div>-->
+      {% include filter.html %}
+    </div> <!--/ .col-md-3 -->
+  </div> <!--/ .row -->
+</div><!--/ .container -->
