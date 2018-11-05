@@ -1,0 +1,5 @@
+#
+# post-merge
+#
+echo "Copying into ~/public_html"
+rm -rfv ~/public_html/* && cp -rv _site/* ~/public_html && chmod -R 755 ~/public_html/*
