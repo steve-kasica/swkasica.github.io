@@ -61,6 +61,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - README.md
+  - bin
   
 sass:
     sass_dir: _sass
