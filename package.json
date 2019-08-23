@@ -1,0 +1,20 @@
+{
+  "name": "swkasica.github.io",
+  "version": "0.0.0",
+  "description": "Stephen Kasica's online portfolio",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/swkasica/swkasica.github.io"
+  },
+  "keywords": [
+    "jekyll",
+    "portfolio",
+    "github pages"
+  ],
+  "author": "Stephen Kasica <stephen.kasica@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://cs.ubc.ca/~kasica",
+  "scripts": {
+    "dev-server": "docker-compose run --service-ports serve"
+  }
+}
