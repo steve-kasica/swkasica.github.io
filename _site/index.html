@@ -1,296 +1,88 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 lang=""> <![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatiable" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Steve Kasica: Portfolio </title>
-        <meta name="description" content="Portfolio website">
-        <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="/css/main.css">
-        <script>
-            /* global ga */
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-          ga('create', 'UA-88748945-1', 'auto');
-          ga('send', 'pageview');
-        </script>        
-    </head>
-    <body class="">
-        
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-9">
-      <div class="row">
-        <div class="offset-md-3 col-md-9">
-          <h1>Steve Kasica:&nbsp;Portfolio</h1>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+      body, html {
+        height: 100%;
+      }
+
+      span.slide-in {
+        overflow: hidden;
+      }
+
+      @media (min-width: 992px) {
+        span.slide-in {
+          display: block;
+        }
+      }
+
+      span.slide-in > span {
+        position: relative;
+        opacity: 0;  /* Hide on pageload */
+        margin-bottom: 0;
+        font-size: 2rem;
+        animation: 0.5s ease-in 0s 1 fadeslide;
+        animation-fill-mode: forwards;
+      }
+
+      .slide-in:nth-child(1) > span { animation-delay: 0; }
+      .slide-in:nth-child(2) > span { animation-delay: 0.1s; }
+      .slide-in:nth-child(3) > span { animation-delay: 0.2s; }
+
+      @keyframes fadeslide {
+        0% { 
+          top: 75px;          
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+          top: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container h-100">
+      <div class="row align-items-center h-100">
+        <div class="w-100">
+            <div class="row">
+              <div class="col-8">
+                  <p>
+                    <span class="slide-in">
+                      <span><strong>Stephen Kasica</strong> MSc student in computer</span>
+                    </span>
+                    <span class="slide-in">
+                      <span>science at <abbr title="University of British Columbia (in Vancouver, Canada)">UBC</abbr>, journalist, CU School of </span>
+                    </span>
+                    <span class="slide-in">
+                      <span>Long Distance Running alum, tacovore 🌮</span>
+                    </span>
+                  </p>
+              </div>
+              <div class="offset-2">
+                <p>
+                  <span class="slide-in"><span><a href="#">Clips</a></span></span>
+                  <span class="slide-in"><span><a href="#">Code</a></span></span>
+                  <span class="slide-in"><span><a href="#">Contact</a></span></span>
+                </p>
+              </div>
+            </div>              
+          </div>
         </div>
-      </div> <!--/ .row -->
-      
-      
-      
-      
-      <div class="row">
-        <div class="offset-md-3 col-md-9">
-          <h2 id="" class="section-header">Code</h2>
-          <p class="section-desc">Interactive articles, gists, and full-blown applications made with software.</p>
-        </div>
-      </div> <!--/ .row -->
-      <section>
-        
-
-
-
-
-
-
-
-
-<div class="isotope vertical" data-layout="vertical">
-    
-        <div class="item-container vertical python mysql" data-coolness="2" data-title="sosweb-restful-api">        
-            <div class="item">
-                <div class="row">
-    <div class="col-md-3 item-label hidden-sm">
-        <p></p>
-    </div>
-    <div class="col-sm-12 col-md-9">
-        <p><a href="https://sos.noaa.gov/api" target="_blank">Science On a Sphere REST API</a> A public web service for accessing more than 500 datasets visualizing weather and climate data, currated by the U.S. National Oceanic and Atmospheric Administration. This project was built with <em>Python</em> and <em>MySQL</em> while working as a web software engineer at <strong>ESRL</strong>.</p>
-    </div>
-</div>
-<!--<em></em>, August  1, 2016-->
-            </div>
-        </div>
-    
-        <div class="item-container vertical data-visualization javascript" data-coolness="3" data-title="news-results">        
-            <div class="item">
-                <div class="row">
-    <div class="col-md-3 item-label hidden-sm">
-        <p></p>
-    </div>
-    <div class="col-sm-12 col-md-9">
-        <p><a href="https://www.esrl.noaa.gov/gsd/renewable/news-results" target="_blank">National Energy with Weather Systems Dashboard</a> A dashboard for displaying 
-model output from cost-optimized configurations of variable electric power generators using weather data. This project was built with <em>D3</em> while working at <strong>ESRL</strong>.</p>
-    </div>
-</div>
-<!--<em></em>, September  2, 2015-->
-            </div>
-        </div>
-    
-        <div class="item-container vertical open-source gists" data-coolness="3" data-title="unsplash-puzzle">        
-            <div class="item">
-                <div class="row">
-    <div class="col-md-3 item-label hidden-sm">
-        <p></p>
-    </div>
-    <div class="col-sm-12 col-md-9">
-        <p><a href="https://bl.ocks.org/swkasica/8049ced71fd92ad02463a85c3e30ec4d" target="_blank">Unsplash Photos of the Year Puzzle</a> This game creates a puzzle out of a randomally selected image from Unsplash's Photos of the Year 2017 collection using the HTML Drag and Drop API.</p>
-    </div>
-</div>
-<!--<em></em>, January 19, 2018-->
-            </div>
-        </div>
-    
-        <div class="item-container vertical javascript" data-coolness="4" data-title="snapbot-sightings">        
-            <div class="item">
-                <div class="row">
-    <div class="col-md-3 item-label hidden-sm">
-        <p></p>
-    </div>
-    <div class="col-sm-12 col-md-9">
-        <p><a href="https://swkasica.github.io/snapbot_sightings" target="_blank">Snapbot Sightings</a> An automated email notification system for Snapbot sightings, built in <em>JavaScript</em> on the <em>Google Apps Script</em> platform.</p>
-    </div>
-</div>
-<!--<em></em>, November 20, 2016-->
-            </div>
-        </div>
-    
-        <div class="item-container vertical javascript" data-coolness="5" data-title="dataset-catalog">        
-            <div class="item">
-                <div class="row">
-    <div class="col-md-3 item-label hidden-sm">
-        <p></p>
-    </div>
-    <div class="col-sm-12 col-md-9">
-        <p><a href="https://sos.noaa.gov/datasets/catalog" target="_blank">Science On a Sphere Dataset Catalog</a> A faceted-search web application for browsing more than 500 weather and climate datasets currated by the U.S. National Oceanic and Atmospheric Administration. Built with <em>JavaScript</em> while working at <strong>ESRL</strong>.</p>
-    </div>
-</div>
-<!--<em></em>, April 18, 2016-->
-            </div>
-        </div>
-    
-    <div class="grid-sizer hidden"></div>
-</div>
-      </section>
-      
-      
-      
-      <div class="row">
-        <div class="offset-md-3 col-md-9">
-          <h2 id="" class="section-header">Words</h2>
-          <p class="section-desc">Profiles, news briefs, and stories written (mostly) when I was working as a print journalist.</p>
-        </div>
-      </div> <!--/ .row -->
-      <section>
-        
-
-
-
-
-
-
-
-
-<div class="isotope vertical" data-layout="vertical">
-    
-        <div class="item-container vertical journalism features" data-coolness="1" data-title="in-chase-for-wins-a-runner-cheats">        
-            <div class="item">
-                <div class="row">
-    <div class="col-md-3 item-label hidden-sm">
-        <p></p>
-    </div>
-    <div class="col-sm-12 col-md-9">
-        <p><a href="http://www.nytimes.com/2012/10/15/sports/runner-christian-hesch-describes-doping-with-epo.html" target="_blank">In Chase for Wins, a Runner Cheats</a> While on assignment for <strong><em>The New York Times</em></strong>, I profiled Christian Hesch, a runner, who said he used a banned substance to recover form an injury. Then he kept winning.</p>
-    </div>
-</div>
-<!--<em></em>, October 14, 2012-->
-            </div>
-        </div>
-    
-        <div class="item-container vertical blog computers" data-coolness="2" data-title="bomb-lab-p2">        
-            <div class="item">
-                <div class="row">
-    <div class="col-md-3 item-label hidden-sm">
-        <p></p>
-    </div>
-    <div class="col-sm-12 col-md-9">
-        <p><a href="https://medium.com/@stvkas/cmu-bomb-lab-phase-2-a91aff587f40" target="_blank">Solving Bomb Lab Phase 2</a> A kind-of-clever, show-offy solution to Phase 2 of CMU's Bomb Lab, which utilizes integer overflow in a valid solution with negative integers.</p>
-    </div>
-</div>
-<!--<em></em>, June  9, 2017-->
-            </div>
-        </div>
-    
-        <div class="item-container vertical journalism outside" data-coolness="3" data-title="stranahans-snowflake-whiskey">        
-            <div class="item">
-                <div class="row">
-    <div class="col-md-3 item-label hidden-sm">
-        <p></p>
-    </div>
-    <div class="col-sm-12 col-md-9">
-        <p><a href="https://www.outsideonline.com/1920761/stranahans-snowflake-whiskey" target="_blank">Stranahan's Snowflake Whiskey</a> Snowflake--a limited-batch whiskey from the Stranahan distillery in Denver, Colo.--is so coveted that hundreds of people wait for hours in sub-zero temperatures just for a bottle. Written while at <strong><em>Outside Magazine</em></strong>.</p>
-    </div>
-</div>
-<!--<em></em>, December 18, 2013-->
-            </div>
-        </div>
-    
-        <div class="item-container vertical journalism" data-coolness="4" data-title="rafters-protest-grand-canyon-shutdown">        
-            <div class="item">
-                <div class="row">
-    <div class="col-md-3 item-label hidden-sm">
-        <p></p>
-    </div>
-    <div class="col-sm-12 col-md-9">
-        <p><a href="https://www.outsideonline.com/1799241/rafters-protest-grand-canyon-shutdown" target="_blank">Rafters Protest Grand Canyon Shutdown</a> Rafting permit holders protest when blocked from entering the Grand Canyon during the 2013 federal government shutdown, written while at <strong><em>Outside Magazine</em></strong>.</p>
-    </div>
-</div>
-<!--<em></em>, October  3, 2013-->
-            </div>
-        </div>
-    
-        <div class="item-container vertical journalism" data-coolness="6" data-title="the-slacker-progidy-mason-wins-at-14">        
-            <div class="item">
-                <div class="row">
-    <div class="col-md-3 item-label hidden-sm">
-        <p></p>
-    </div>
-    <div class="col-sm-12 col-md-9">
-        <p><a href="http://www.vaildaily.com/news/sports/the-slacker-prodigy-mason-wins-at-14" target="_blank">The "Slacker" prodigy: Mason wins at 14</a> My article on 14-year-old Alex "The Machine" Mason winning the slacklining event at the 2012 Teva Mountain Games, written while at <strong><em>The Vail Daily</em></strong>.</p>
-    </div>
-</div>
-<!--<em></em>, June  3, 2012-->
-            </div>
-        </div>
-    
-    <div class="grid-sizer hidden"></div>
-</div>
-      </section>
-      
-      
-      <!--<h2 id="title" class="typewrite" data-type='Masters student in computer science at UBC^|Volunteer TA with TEALS^|Runner' data-period="10000  // in ms">-->
-      <!--  <span class="wrap"></span>-->
-      <!--</h2>-->
-    <div class="row">
-      <div class="offset-md-3 col-md-9">
-        <footer class="row">
-    <div class="col">
-    <ul><span>
-        
-        <li>
-            <a href="https://github.com/swkasica" data-toggle="tooltip" data-placement="top" title="GitHub">
-                <i class="fa fa-github"></i>
-            </a>
-        </li>
-        
-        <li>
-            <a href="https://medium.com/@swkasica" data-toggle="tooltip" data-placement="top" title="Medium">
-                <i class="fa fa-medium"></i>
-            </a>
-        </li>
-        
-        <li>
-            <a href="https://twitter.com/swkasica" data-toggle="tooltip" data-placement="top" title="Twitter">
-                <i class="fa fa-twitter"></i>
-            </a>
-        </li>
-        
-        <li>
-            <a href="https://www.linkedin.com/in/kasica/" data-toggle="tooltip" data-placement="top" title="LinkedIn">
-                <i class="fa fa-linkedin-square"></i>
-            </a>
-        </li>
-        
-        <li>
-            <a href="https://stackoverflow.com/users/3734991/kas" data-toggle="tooltip" data-placement="top" title="Stack Overflow">
-                <i class="fa fa-stack-overflow"></i>
-            </a>
-        </li>
-        
-        <li>
-            <a href="mailto:kasica@cs.ubc.ca" data-toggle="tooltip" data-placement="top" title="Email">
-                <i class="fa fa-envelope"></i>
-            </a>
-        </li>
-        
-    </span></ul>
-    
-    <p class="build">This site was last updated on 05 November 2018</p>        
-    </div>
-</footer>                 
-      </div>      
-    </div>
-    </div> <!--/ .col-md-9 -->
-
-    <!--  <div class="col-md-2 position-fixed filter">      -->
-    <!--</div>-->
-      <!-- _includes/header.html --
-<p>Filtered by <span class="checkbox"><a href='#' datavalue="outside" datakey="checkbox">Outside</a>, <a href='#' datavalue="blog" datakey="checkbox">blog</a>, <a href='#' datavalue="computers" datakey="checkbox">computers</a>, <a href='#' datavalue="features" datakey="checkbox">features</a>,</span> <span class="radio logic"><a href="#" datakey="logic" datavalue="xor">xor</a><a href="#" class="d-none" datavalue="or" datakey="logic">or&nbsp;</a><a href="#" datavalue="and" datakey="logic" class="d-none">and</a></span><span class="checkbox"> <a href='#' datavalue="journalism" datakey="checkbox">journalism</a></span>. Sorted by <span class="radio"><a href="#" datavalue="coolness" datakey="sort">coolness</a><a href="#" datakey="sort" datavalue="title" class="d-none">title&nbsp;&nbsp;&nbsp;</a></span> in <span class="order radio"><a href="#" datavalue="asc" datakey="order">ascending&nbsp;</a><a href="#" datavalue="desc" class="d-none" datakey="order">descending</a></span> order.</p>
-<!--/ _includes/header.html -->
-
-    </div> <!--/ .col-md-3 -->
-  </div> <!--/ .row -->
-</div><!--/ .container -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        <!--<script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>-->
-        <script type="text/javascript" src="/js/site.js"></script>
-    </body>
+      </div>
+    </div> <!--/ .container -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+  </body>
 </html>

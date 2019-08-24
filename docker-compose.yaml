@@ -1,10 +1,10 @@
 version: '3'
 services:
-  serve:
-    entrypoint: ["jekyll", "serve"]
+  jekyll:
     build: .
     container_name: swkasica.github.io
     volumes:
       - .:/srv/jekyll
     ports:
       - 4000:4000
+      - 35729:35729

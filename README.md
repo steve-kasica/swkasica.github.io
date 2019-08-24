@@ -8,6 +8,7 @@ When I swtiched to Windows in 2018, I moved development for this website to Dock
 
 ### Commands
 
-* `npm run dev-server`: spins up the local development server at http://127.0.0.1:4000.
+I've aliased a couple useful docker-compose commands as npm scripts inside `package.json`.
 
-
+* `npm run dev-server`: spins up the local development server at http://127.0.0.1:4000 with live reloading and file watching.
+* `npm run bash`: open a bash shell inside the Docker container, which is helpful for figuring out what's going on with Jekyll.
