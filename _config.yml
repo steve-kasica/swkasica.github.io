@@ -6,49 +6,9 @@ repository: swkasica/swkasica.github.io
 baseurl: '/'
 analytics_code: 'UA-88748945-1'
 
-taglines:
-    - "Masters student in computer science at UBC"
-    - "Volunteer TA with TEALS"
-    - "Runner"
-
-tag_cycle: 10000  // in ms
-
 collections:
-    code:
+    portfolio:
         output: false
-        layout: "vertical"
-        order: 1
-        desc: "Interactive articles, gists, and full-blown applications made with software."
-    words:
-        output: false
-        layout: "vertical"
-        order: 2
-        desc: "Profiles, news briefs, and stories written (mostly) when I was working as a print journalist."
-    # datasets:
-    #     output: false
-    #     layout: "vertical"
-    #     order: 3
-    #     desc: "Pellentesque vel posuere orci."
-        
-links:
-    - href: https://github.com/swkasica
-      icon: fa-github
-      name: GitHub
-    - href: https://medium.com/@swkasica
-      icon: fa-medium
-      name: Medium
-    - href: https://twitter.com/swkasica
-      icon: fa-twitter
-      name: Twitter
-    - href: https://www.linkedin.com/in/kasica/
-      icon: fa-linkedin-square
-      name: LinkedIn
-    - href: https://stackoverflow.com/users/3734991/kas
-      icon: fa-stack-overflow
-      name: Stack Overflow
-    - href: mailto:kasica@cs.ubc.ca
-      icon: fa-envelope
-      name: Email
 
 permalink: none
 

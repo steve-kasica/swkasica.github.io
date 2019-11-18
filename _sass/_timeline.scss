@@ -1,0 +1,111 @@
+// 
+// _timeline.scss
+//
+$container-shadow: 0.5rem 0.5rem 2rem 0 rgba(black, 0.2);
+
+$gutter: 40px;
+$border-width: 4px;
+
+.about {
+    background-color: $bgColor;
+    background-image: $slide3BG;
+    background-position: right;
+}
+
+.timeline {
+    top: 8% !important;
+    padding-top: 10%;      
+    width: 100%;
+    max-width: 800px;
+    
+    @media screen and (min-width: $tabletEnd) {
+        top: 0 !important;        
+        padding: 200px 50px 70px 50px;    
+    }
+
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 32%;
+    @media screen and (min-width: $tabletEnd) {
+        left: calc(33% + 15px);        
+    }
+    bottom: 0px;
+    width: $border-width;
+    background: $timelineColor;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  } 
+}
+$dotSize: 50px;
+.entry {
+    &:nth-child(3) {
+        margin-bottom: 300px;
+    }
+    clear: both;
+    text-align: left;
+    position: relative;
+    .title {
+        margin-bottom: .5em;
+        float: left;
+        width: 33%;
+        text-align: right;
+        position: relative;
+        h3 {
+            margin: 0;
+            font-size: 120%;
+        }
+        p {            
+            margin: 0;
+            color: black;
+            font-size: 100%;
+            font-weight: bold;
+            padding-right: $gutter;
+        }
+    }
+    .icon {
+        position: absolute;
+        top: -15px;
+        right: -24px;
+        height: $dotSize;
+        width: $dotSize;
+        font-style: normal;
+        text-align: center;
+        background-color: $timelineColor;
+        border-radius: 50%;
+        font-size: $dotSize - 20;
+        line-height: $dotSize;  // #technical-debt
+    }  
+    .body {
+        margin: 0 0 3em;
+        float: right;
+        width: 62%;
+        padding-left: 5%;
+        p {
+            padding-left: 20px;
+            @media screen and (min-width: $tabletEnd) {
+                padding-left: 0;
+            }
+            line-height: 1.4em;
+            color: $black;
+            &:first-child {
+                margin-top: 0;
+                font-weight: 400;
+            }
+        }
+        ul {
+            color:#aaa;
+            padding-left: 0;
+            list-style-type: none;
+            li:before {
+                content: "–";
+                margin-right: .5em;
+            }
+        }
+    }  // body
+}  // .entry

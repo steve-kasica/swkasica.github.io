@@ -1,92 +1,28 @@
 ---
-base: 
-title: foo
+layout: base
+title: 'Hello'
+styles:
+- href: css/landing.css
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<div class="landing">
+    <div class="slide">
+     <h1>Steve&nbsp;Kasica</h1>
+      <h2>Grad&nbsp;student, news&nbsp;nerd</h2>
+    </div>
+    <div class="slide">
+        <p>I'm currently pursuing a MSc in computer science at University of British Columbia in Vancouver, Canada. I work as a research assistant in Tamara Munzner's <a href="http://www.cs.ubc.ca/group/infovis">InfoVis Group</a>. I came to computer science from journalism and my interests lie at the intersection of both.</p>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-    <style>
-      body, html {
-        height: 100%;
-      }
-
-      span.slide-in {
-        overflow: hidden;
-      }
-
-      @media (min-width: 992px) {
-        span.slide-in {
-          display: block;
-        }
-      }
-
-      span.slide-in > span {
-        position: relative;
-        opacity: 0;  /* Hide on pageload */
-        margin-bottom: 0;
-        font-size: 2rem;
-        animation: 0.5s ease-in 0s 1 fadeslide;
-        animation-fill-mode: forwards;
-      }
-
-      .slide-in:nth-child(1) > span { animation-delay: 0; }
-      .slide-in:nth-child(2) > span { animation-delay: 0.1s; }
-      .slide-in:nth-child(3) > span { animation-delay: 0.2s; }
-
-      @keyframes fadeslide {
-        0% { 
-          top: 75px;          
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-          top: 0px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container h-100">
-      <div class="row align-items-center h-100">
-        <div class="w-100">
-            <div class="row">
-              <div class="col-8">
-                  <p>
-                    <span class="slide-in">
-                      <span><strong>Stephen Kasica</strong> MSc student in computer</span>
-                    </span>
-                    <span class="slide-in">
-                      <span>science at <abbr title="University of British Columbia (in Vancouver, Canada)">UBC</abbr>, journalist, CU School of </span>
-                    </span>
-                    <span class="slide-in">
-                      <span>Long Distance Running alum, tacovore 🌮</span>
-                    </span>
-                  </p>
-              </div>
-              <div class="offset-2">
-                <p>
-                  <span class="slide-in"><span><a href="#">Clips</a></span></span>
-                  <span class="slide-in"><span><a href="#">Code</a></span></span>
-                  <span class="slide-in"><span><a href="#">Contact</a></span></span>
-                </p>
-              </div>
-            </div>              
-          </div>
-        </div>
-      </div>
-    </div> <!--/ .container -->
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
-  </body>
-</html>
+        <p>Before writing academic papers, I wrote features and news articles on issues in the American West, such as access to public lands, endurance sports, and whiskey. My byline has appear in: <em>Outside</em>, <em>The Vail Daily</em>, and <em>The New York Times</em>.</p>
+        
+        <p>I also logged a few years at the National Oceanic & Atmospheric Administration (NOAA) Earth Systems Research Laboratory, where I built visualizations and web applications for meterologists and science communicators.</p>
+    
+        <p>Don't be shy, say hi. Feel free to reach out on any channel below.</p>  
+    </div>
+    <div class="contact slide">
+        {% for contact in site.data.contact %}
+        <a href="{{ contact.href }}">
+          <i class="fa {{ contact.icon }}"></i>
+        </a>
+        {% endfor %}
+    </div>    
+</div> <!--/ .container -->

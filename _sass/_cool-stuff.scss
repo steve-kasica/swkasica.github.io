@@ -1,0 +1,80 @@
+// _cool-stuff.scss
+// =================================
+//
+
+.cool-stuff {
+    background-color: $bgColor;
+    background-image: $slide2BG;
+    background-position: right;
+
+    @media screen and (min-width: $tabletEnd) {
+        background-position: bottom;
+    }
+
+    > div {
+        top: 10%;        
+        left: unset;
+        right: 5%;
+        max-width: 750px;
+        .grid {
+            @media screen and (min-width: $mobileEnd) {
+                .col.double {
+                    column-count: 2;
+                }
+            }
+            @media screen and (min-width: $tabletEnd) {
+                display: grid;
+                grid-template-columns: 2fr 2fr 1fr;
+                grid-gap: 10px;            
+            }        
+            > div {
+                padding: 8px 4px;
+            }
+            h4 {
+                padding-bottom: 5px;
+                border-bottom: 2px solid $writingTextColor;
+                color: $writingTextColor;
+            }
+            
+            .blurb {
+                margin-bottom: 20px;
+
+                p, h5 { 
+                    margin: 0;
+                }
+
+                .title {
+                    font-weight: bold;
+                    font-size: 16px;
+                    > a {
+//                        background: $linkBG;
+                        color: $darkBlue;
+                    }
+                }                
+
+                .org {
+                    margin-top: 2px;
+                    font-family: $headingFont;
+                    color: $black;
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                }
+
+                .desc {
+                    color: $black;
+                }
+            }
+
+            .org {
+
+            }
+
+            p > span {
+                display: block;
+                color: $writingTextColor;
+                margin: 2px 0;
+                
+            }
+        }
+    }
+} // .writing

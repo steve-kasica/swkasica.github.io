@@ -1,0 +1,22 @@
+
+@mixin portfolioItem($width: 23%) {
+    .portfolio-item {
+        width: $width;        
+        float: left;
+        max-width: 400px;
+        padding: 1%;        
+        img {
+            width: 100%;
+        }
+        a {
+            text-decoration: none;
+        }        
+        p {
+            margin-top: 0;
+            font-size: 16px;
+            &:hover {
+                text-decoration: underline;
+            }            
+        }
+    }
+  } // .portfolio-item

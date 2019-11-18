@@ -1,31 +1,27 @@
 //
 // _sass/_variables.scss
+// =================================================================================
 //
-$modularscale: (
-  base: 1em,
-  ratio: 1.5
-);
 
-$title_font_size: ms(2);
-$text_size: ms(0);
-$section_font_size: ms(1);
-$section_desc_font_size: $text_size + 0.1;
+// Typography
+// ---------------------------------------------------------------------------------
+//
+@import url('https://fonts.googleapis.com/css?family=Lato:700|Source+Sans+Pro&display=swap');
+$headingFont: 'Lato', sans-serif;
+$bodyFont: 'Source Sans Pro', sans-serif;
 
-$h1_font_size: $title_font_size;    // Site title
-$h2_font_size: $section_font_size;  // sections, e.g. articles
-$p_font_size: $text_size;
+$headingFontSize: 4em;
+$h1Size: 4.5rem;
+$h2Size: 2.5rem;
+$bodyFontSize: 1.5rem;
+$bodyLineHeight: 1.4;
+$iconFontSize: $bodyFontSize;
 
-// Layout
-$title_margin_bottom: 50px;
-
-// Style
-$border_style: 2px black solid;    // Underline under site title
-
-/// OLD LAYOUT
+$iconSpacing: 15px;
 
 // Layout
-$maxWidth: 60em;
-
+// ---------------------------------------------------------------------------------
+//
 $mobileStart: 320px;
 $mobileEnd: 425px;
 $tabletStart: $mobileEnd + 1px;
@@ -36,40 +32,22 @@ $fourKStart: $laptopEnd + 1px;
 $fourKEnd: 2560px;
 $pageGutters: 10%;
 
-// Color Palette
-$white: #ffffff;
-$black: #121212;
-$yellow: #F6E481;
-$brown: #4F4543;
-$red: #D24027;
-$blue: #337DAE;
-$green: #8BEAD8;
-$bgColor: $white;
-$footerBg: $blue;
-$textColor: $black;
-$linkColor: lighten($blue, 0%);
-$tagColor: lighten($black, 50%);
-$filterColor: darken($green, 20%);
+$sidebarWidth: 33%;
+$sidebarPadding: 3%;
 
-// Headings
-$hColor: $textColor;
-$h1BgColor: $black;
-$headingBorderStyle: 2px solid $black;
-$hFont: Zilla Slab, serif;
 
-$activeIconColor: $textColor;
-$tooltipColor: $textColor;
-$brandBgColor: $textColor;
+// Colors
+// ---------------------------------------------------------------------------------
+//
+$cactusGreen: #c7d7c0;
+$adobe: #fff7e6;
+$chocolate: #553825;
+$graphite: #4a4a4a;
+$skyblue: #b4dfe5;
 
-// Typography
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Zilla+Slab:600');
-$textFont: Source Sans Pro, sans-serif;
-
-$filterFont: $textFont;
-
-$bold: 700;
-$lineHeight: 1.25;
-$modularscale: (
-    base: 1em,
-    ratio: 1.5,
-);
+$bgColor: $adobe;
+$h1Color: darken($cactusGreen, 15%);
+$h1TextShadow: darken($cactusGreen, 40%);
+$h2Color: $h1Color;
+$pColor: $graphite;
+$linkColor: darken($skyblue, 35%);

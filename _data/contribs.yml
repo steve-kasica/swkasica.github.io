@@ -1,0 +1,15 @@
+- title: Make Error Messages when Deploying More Verbose
+  org: Python GAS CLI
+  link: https://github.com/joestump/python-gas-cli/pull/3
+- title: Define Bar Corner Radius on Initialization
+  org: frappe/gantt
+  link: https://github.com/frappe/gantt/pull/43
+- title: Set Attachment Instance Name to Filename as Default
+  org: django/django-summernote
+  link: https://github.com/summernote/django-summernote/pull/178
+- title: Fix Bug in getTokenFromResponse_ for APIs that Respond with 201 Created
+  org: googlesamples/apps-script-oauth2
+  link: https://github.com/googlesamples/apps-script-oauth2/pull/72
+- title: Dynamic Filtering and BuildableListView
+  org: datadesk/django-bakery
+  link: https://github.com/datadesk/django-bakery/issues/99

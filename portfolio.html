@@ -1,0 +1,80 @@
+---
+layout: base
+title: Portfolio
+scripts:
+- src: https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js
+- src: js/portfolio.js
+styles:
+- href: css/portfolio.css
+---
+
+{% assign projects = site.portfolio | sort: 'coolness' %}
+{% assign delim = '^' %}
+
+{% capture medium %}
+  {% for p in projects %}{% for tag in p.medium %}{{ tag | strip | append: delim }}{% endfor %}{% endfor %}
+{% endcapture %}
+{% assign mSize = medium | strip | size | minus: 1 %}
+{% assign mediumTags = medium | strip | slice: 0, mSize | split: delim | uniq | sort %}
+
+{% capture genre %}
+  {% for p in projects %}{% for tag in p.genre %}{{ tag | strip | append: delim }}{% endfor %}{% endfor %}
+{% endcapture %}
+{% assign gSize = genre | strip | size | minus: 1 %}
+{% assign genreTags = genre | strip | slice: 0, gSize | split: delim | uniq | sort %}
+
+{% assign sorts = 'Coolness, Title, Random' | split: ',' %}
+{% assign logics = 'OR, AND' | split: ',' %}
+
+<div class="portfolio">
+    <div class="sidebar">
+        <h1>Portfolio</h1>                    
+        <nav class="filter">
+            <form id="filter">
+                <h4 class="filter">Filter</h4>
+                {% for logic in logics %}
+                    <input type="radio" name="logic" value="{{ logic | slugify }}" {% if forloop.index == 1 %}checked{% endif %}>
+                    <label for="{{ logic | slugify }}">{{ logic }}</label>                       
+                {% endfor %}                
+                <div class="tags">
+                    <div class="left">
+                        {% for tag in genreTags %}
+                            <input type="checkbox" name="filter" value="{{ tag | slugify }}">{{ tag }} <br>
+                        {% endfor %}
+                    </div>
+                    <div class="right">
+                        {% for tag in mediumTags %}
+                            <input type="checkbox" name="filter" value="{{ tag | slugify }}">{{ tag }} <br>
+                        {% endfor %}
+                    </div>
+                </div> <!--/ .tags -->
+                <div class="sort">
+                    <div class="left">
+                        <h4>Sort</h4>
+                        {% for sort in sorts %}
+                            <input type="radio" name="sortBy" value="{{ sort | slugify }}" {% if forloop.index == 1 %}checked{% endif %}>
+                            <label for="{{ sort | slugify }}">{{ sort }}</label><br>                        
+                        {% endfor %}
+                    </div>
+                    <div class="right">
+                        <h4>Order</h4>
+                        <input type="radio" name="sortAscending" value="true" checked>
+                        <label for="true">Ascending</label> <br>
+                        <input type="radio" name="sortAscending" value="false">
+                        <label for="false">Descending</label>               
+                    </div>
+                </div>
+            </form>
+        </nav>        
+    </div> <!--/ .sidebar -->
+    <div class="items">
+        <div class="grid">
+            <div class="item-sizer"></div>
+            {% for item in site.portfolio %}
+            <div class="item {{ item.genre | join: '^' | downcase | strip | replace: ' ', '-' | replace: '^', ' ' }} {{ item.medium | join: '^' | downcase | strip | replace: ' ', '-' | replace: '^', ' ' }}" data-coolness="{{ item.coolness }}" data-title="{{ item.title }}">
+                {% include portfolio-item.html item=item landing=false %} 
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

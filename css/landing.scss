@@ -1,0 +1,44 @@
+---
+---
+//
+// css/landings.scss
+// ------------------------
+//
+@import "variables";
+@import "base";
+@import "mixins";
+
+@keyframes fadeslide {
+    0% {
+      top: 75px;
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      top: 0px;
+    }
+  }
+  
+  .landing {
+    width: 720px;
+    max-width: 75%;
+    padding: 100px 0;
+    margin: auto;
+
+    .contact {
+      width: 100%;
+      a {
+        text-decoration: none;
+        i {
+          font-size: $iconFontSize;
+          margin-right: $iconSpacing;
+          color: $linkColor;
+        }
+      }
+    } // .contact
+  }
+  
+  // .slide-in:nth-child(1) > span { animation-delay: 0; }
+  // .slide-in:nth-child(2) > span { animation-delay: 0.1s; }
+  // .slide-in:nth-child(3) > span { animation-delay: 0.2s; }
+  

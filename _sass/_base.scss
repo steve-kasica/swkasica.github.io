@@ -1,22 +1,47 @@
 //
 // _sass/_base.scss
+// ================================================================
 //
 
-h1 {
-    font-size: $h1_font_size;
-    border-bottom: $border_style;
-    margin-bottom: $title_margin_bottom;
-    text-align: center;
-}
-
-h2 {
-    font-size: $h2_font_size;
-}
-
-p {
-    font-size: $p_font_size;
-}
-
-.section-desc {
-    font-size: $section_desc_font_size;
-}
+html {
+  overflow-y: scroll;  // Fixes page shake when scrollbar appears
+  body {
+    background-color: $bgColor;
+    font-family: $bodyFont;
+    p {
+      font-size: $bodyFontSize;
+      line-height: $bodyLineHeight;
+      color: $pColor;
+    }
+    a {
+      text-decoration: underline;
+      color: $linkColor;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $headingFont;
+      font-size: $headingFontSize;
+    }
+    h1, h2 {
+      margin: 0;
+    }
+    h1 { 
+      font-size: $h1Size; 
+      color: $h1Color;
+      margin: 0;
+      text-shadow: 1px 1px 0px $h1TextShadow,
+                   2px 2px 0px $h1TextShadow,
+                   3px 3px 0px $h1TextShadow,
+                   4px 4px 0px $h1TextShadow;
+    }
+    h2 { 
+      font-size: $h2Size; 
+      color: $h2Color;
+      margin: 0;
+    }
+  }  // body
+}  // html

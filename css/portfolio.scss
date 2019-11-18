@@ -1,0 +1,15 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+// css/portfolio.scss
+// =====================================================
+//
+@import "variables";
+$filterColor: blue;
+$filterFont: sans-serif;
+
+@import "filter";
+@import "base";
+@import "mixins";
+@import "portfolio";

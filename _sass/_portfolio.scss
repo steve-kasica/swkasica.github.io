@@ -1,0 +1,42 @@
+// 
+// _sass/_portfolio.scss
+//
+.portfolio {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: $sidebarWidth;
+        padding: 0 $sidebarPadding;
+    }
+    .items {
+        float: left;
+        width: 100% - $sidebarWidth - ($sidebarPadding * 2);
+        padding-left: $sidebarWidth + ($sidebarPadding * 2);
+
+        .grid {
+            a { color: inherit; }
+            @include portfolioItem(unset);
+            .item-sizer, .item {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }        
+    } // .items
+    h4.filter {
+        display: inline;
+        padding-right: 10px;
+    }
+    .tags {
+        margin-top: 15px;
+    }
+    .tags, .sort {
+        display: inline-block;
+        width: 100%;
+    }
+    .left, .right {
+        float: left;
+        width: 50%;
+    }
+}
+
