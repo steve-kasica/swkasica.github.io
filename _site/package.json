@@ -12,7 +12,8 @@
   "homepage": "https://cs.ubc.ca/~kasica",
   "scripts": {
     "dev-server": "docker-compose run --service-ports jekyll jekyll serve --force-polling --livereload",
-    "bash": "docker-compose run --service-ports jekyll bash"
+    "bash": "docker-compose run --service-ports jekyll bash",
+    "pub-ubc": "scp -r _site/* kasica@remote.cs.ubc.ca:~/public_html/"
   },
   "dependencies": {}
 }
